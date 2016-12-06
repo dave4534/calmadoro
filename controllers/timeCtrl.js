@@ -1,6 +1,9 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-
+	 $scope.timer = 'we are on board';
+	//display timer on 25 min
+	var seconds = 1500;
+	var countdown_type = seconds;
 
 	var getUItime = function(seconds){
 
@@ -22,12 +25,10 @@ app.controller('TimeCtrl', function($scope, $timeout){
   	return result;
   };
 
-  $scope.timer = 'we are on board';
-	//display timer on 25 min
-	var seconds = 1500;
 	$scope.counterSec = getUItime(seconds);
 	var isTimerRunning = false;
 
+	//start running timer
 	$scope.startTimer = function() {
 			isTimerRunning = true;
 
@@ -42,12 +43,27 @@ app.controller('TimeCtrl', function($scope, $timeout){
     }, 1000);
   };
 
+  //stop/pause timer
   $scope.stopTimer = function(){
    	 //stop the timer
 	   isTimerRunning = false;
   };
 
+  //reset timer to 25 min
+  $scope.resetTimer = function() {
 
+  	//reset seconds to 25min
+  	seconds = 1500;
+  	// seconds = countdown_type;
+  	$scope.counterSec = getUItime(seconds);
+  };
+
+  // $scope.breakTime = function() {
+  // 	seconds = 30;
+  // 	countdown_type = seconds;
+  // 	$scope.counterSec = getUItime(seconds);
+  // 	$scope.startTimer();
+  // };
 
 
 });
