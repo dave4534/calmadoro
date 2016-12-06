@@ -4,20 +4,41 @@
   <title></title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="bgImage">
-    <div class="row" >
-    
-        <div class="logo" >Logo</div>
-      
+      <div class="row" >
+        <img src="images/logo.png" class="logo" >  
+      </div>
+      <div class="row">
+      <div class="timer">25:00</div>
+      </div>
+      <div class="row">
+        <div class="buttonContainer">
+          <button class="button">Start</button>
+          <button class="button">Stop</button>
+          <button class="button">Reset</button>
+          <button class="button">Break</button>
+        </div>
+      </div>
+      <div class="row musicPlayerBox">
+        <p class="playerHeader">PLAY SOME CHILL MUSIC</p>
+        <div class="musicPlayerButtonContainer">
+        <div class="musicPlayerButton "><img src="images/next.png" class="backButton"></div>
+        <div class="musicPlayerButton "><img src="images/play.png" class="playButton"></div>
+        <div class="musicPlayerButton "><img src="images/next.png" class="nextButton"></div>
+        </div>
+        <div class="playerTimeline"></div>
+        <p class="nowPlaying">THE SPINNERS - IT'S A SHAME</p>
+      </div>
+      <div class="row">
+      <div class="poweredByContainer">
+        <p class="poweredBy">POWERED BY</p> <img src="images/spotifyLogo.png" class="spotifyLogo">
+        </div>
+      </div>
     </div>
-    <div class="row" class="timer">
-      25:00
-    </div>
-
-
-</div>
   </div>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </body>
 </html>
