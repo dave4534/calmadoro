@@ -1,23 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE >
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+ <!--    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
+  	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Calmadoro</title>
+</head>
+
   <title></title>
 </head>
-<body>
+<body ng-app="calmadoro" ng-controller="TimeCtrl">
   <div class="container-fluid">
-    <div class="bgImage">
+    <div class="bgImage">{{timer}}
       <div class="row" >
-        <img src="images/logo.png" class="logo" >  
+        <img src="images/logo.png" class="logo" >
       </div>
       <div class="row">
-      <div class="timer">25:00</div>
+      <div class="timer"><!-- 25:00 -->
+      	{{counterSec}}
+      </div>
       </div>
       <div class="row">
         <div class="buttonContainer">
-          <button class="button">Start</button>
-          <button class="button">Stop</button>
-          <button class="button">Reset</button>
-          <button class="button">Break</button>
+          <button class="button" ng-click="startTimer()">Start</button>
+          <button class="button" ng-click="stopTimer()">Stop</button>
+          <button class="button" ng-click="resetTimer()">Reset</button>
+          <!-- <button class="button" ng-click="breakTime()">Break</button> -->
         </div>
       </div>
       <div class="row musicPlayerBox">
@@ -37,8 +46,11 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- script files -->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/timeCtrl.js"></script>
+
 </body>
 </html>
