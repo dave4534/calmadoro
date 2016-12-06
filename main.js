@@ -8,9 +8,9 @@ initAudio($('#playlist li:first-child'));
   
 function initAudio(element){
   var song = element.attr('song');
-    var title = element.text();
-    var cover = element.attr('cover');
-    var artist = element.attr('artist');
+  var title = element.text();
+  var cover = element.attr('cover');
+  var artist = element.attr('artist');
 
   //Create a New Audio Object
   audio = new Audio('media/' + song);
@@ -115,5 +115,19 @@ function showDuration(){
       value = Math.floor((100 / audio.duration) * audio.currentTime);
     }
     document.getElementById('progress').style.width = value +'%';
+    
+    if (audio.duration === audio.currentTime) {
+
+      var next = $('#playlist li.active').next();
+      if (next.length == 0) {
+        next = $('#playlist li:first-child');
+      }
+    initAudio(next);
+    audio.play();
+    $('#play').hide();
+    $('#pause').show();
+    showDuration();
+
+    };
   });
 }
