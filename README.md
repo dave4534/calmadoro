@@ -1,3 +1,3 @@
 # calmadoro
 
-using angular.js and probably bootstrap
+using angular.js and bootstrap
