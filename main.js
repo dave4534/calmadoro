@@ -64,6 +64,8 @@ $('#next').click(function(){
     }
     initAudio(next);
   audio.play();
+  $('#play').hide();
+  $('#pause').show();
   showDuration();
 });
 
@@ -76,6 +78,8 @@ $('#prev').click(function(){
     }
     initAudio(prev);
   audio.play();
+  $('#play').hide();
+  $('#pause').show();
   showDuration();
 });
 
@@ -92,7 +96,7 @@ $('#playlist li').click(function () {
 
 //Volume Control
 $('#volume').change(function(){
-  audio.volume = parseFloat(this.value / 10);
+  audio.volume = parseFloat(this.value/10);
 });
   
 //Time Duration
@@ -110,6 +114,6 @@ function showDuration(){
     if (audio.currentTime > 0) {
       value = Math.floor((100 / audio.duration) * audio.currentTime);
     }
-    $('#progress').css('width',value+'%');
+    document.getElementById('progress').style.width = value +'%';
   });
 }
