@@ -1,34 +1,53 @@
-<!DOCTYPE html>
+<!DOCTYPE >
 <html>
 <head>
-	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
     <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Calmadoro</title>
 </head>
+
+  <title></title>
+</head>
 <body ng-app="calmadoro" ng-controller="TimeCtrl">
+  <div class="container-fluid">
+    <div class="bgImage">{{timer}}
+      <div class="row" >
+        <img src="images/logo.png" class="logo" >
+      </div>
+      <div class="row">
+      <div class="timer">25:00
+      	{{counter}}
+      </div>
+      </div>
+      <div class="row">
+        <div class="buttonContainer">
+          <button class="button" ng-click="startTimer()">Start</button>
+          <button class="button" ng-click="stopTimer()">Stop</button>
+          <button class="button" ng-click="resetTimer()">Reset</button>
+          <button class="button" ng-click="breakTime()">Break</button>
+        </div>
+      </div>
+      <div class="row musicPlayerBox">
+        <p class="playerHeader">PLAY SOME CHILL MUSIC</p>
+        <div class="musicPlayerButtonContainer">
+        <div class="musicPlayerButton "><img src="images/next.png" class="backButton"></div>
+        <div class="musicPlayerButton "><img src="images/play.png" class="playButton"></div>
+        <div class="musicPlayerButton "><img src="images/next.png" class="nextButton"></div>
+        </div>
+        <div class="playerTimeline"></div>
+        <p class="nowPlaying">THE SPINNERS - IT'S A SHAME</p>
+      </div>
+      <div class="row">
+      <div class="poweredByContainer">
+        <p class="poweredBy">POWERED BY</p> <img src="images/spotifyLogo.png" class="spotifyLogo">
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div >
-	{{timer}}
-	</div>
-
-	<div class="row">
-  		<div class="col-sm-6">
-  		{{counter}}
-  		</div>
-	</div>
-
-
-	<div>
-		<button type="button" class="btn btn-primary" ng-click="startTimer()">Start</button>
-		<button type="button" class="btn btn-primary" ng-click="stopTimer()">Stop</button>
-		<button type="button" class="btn btn-primary" ng-click="resetTimer()">Reset</button>
-		<button type="button" class="btn btn-primary" ng-click="breakTime()">Break</button>
-	</div>
-
-<!-- script files -->
+	<!-- script files -->
   <script src="node_modules/angular/angular.js"></script>
   <script src="app.js"></script>
   <script src="controllers/timeCtrl.js"></script>
