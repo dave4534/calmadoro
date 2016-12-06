@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
 
     <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -11,6 +12,20 @@
 
 	<div >
 	{{timer}}
+	</div>
+
+	<div class="row">
+  		<div class="col-sm-6">
+  		{{counter}}
+  		</div>
+	</div>
+
+
+	<div>
+		<button type="button" class="btn btn-primary" ng-click="startTimer()">Start</button>
+		<button type="button" class="btn btn-primary" ng-click="stopTimer()">Stop</button>
+		<button type="button" class="btn btn-primary" ng-click="resetTimer()">Reset</button>
+		<button type="button" class="btn btn-primary" ng-click="breakTime()">Break</button>
 	</div>
 
 <!-- script files -->
