@@ -58,22 +58,23 @@
 }
 
 .musicPlayerBox {
-  height: 200px;
-  width: 45%;
+  height: 160px;
+  width: 40%;
   margin: 0 auto;
   margin-top: 40px;
   border-radius: 8px;
-  background-color: #b1b9bb;
-  opacity: .4;
+  /*background-color: #b1b9bb;*/
+  /*opacity: .4;*/
 }
 
 .playerHeader {
   text-align: center;
-  color: white;
+  color: gray;
   font-family: 'Montserrat Light';
   font-size: 1.6em;
   letter-spacing: .1em;
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .musicPlayerButtonContainer {
@@ -123,7 +124,7 @@
 
 .poweredByContainer {
   text-align: center;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 
 .poweredBy {
@@ -138,4 +139,5 @@
   height: 25px;
   margin-left: 5px;
 }
+
 
