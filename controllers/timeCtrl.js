@@ -1,7 +1,12 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-	 $scope.timer = 'we are on board';
-   $scope.togglingButton = 'START'
+  $scope.togglingButton = 'START';
+  $scope.mode = 'Break';
+  $scope.imgsrc = 'images/working.png';
+  $scope.workTextCol = 'white';
+  $scope.workBgCol = 'blue';
+  $scope.restTextCol = 'blue';
+  $scope.restBgCol = 'white';
 
 	//display timer on 25 min
 	var seconds = 1500;
@@ -17,9 +22,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
 				// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
 				// if (hh > 12) {hh = hh % 12;}
 				// These lines ensure you have two-digits
-				if (hh < 10) {hh = "0"+hh;}
-				if (mm < 10) {mm = "0"+mm;}
-				if (ss < 10) {ss = "0"+ss;}
+				if (hh < 10) {hh = "0"+hh;};
+				if (mm < 10) {mm = "0"+mm;};
+				if (ss < 10) {ss = "0"+ss;};
 				// This formats your string to HH:MM:SS
 				// var result = hh+":"+mm+":"+ss;
 				var result = mm+":"+ss;
@@ -35,7 +40,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
     isTimerRunning = !isTimerRunning;
     
     if (isTimerRunning) {
-      $scope.togglingButton = 'STOP'
+      $scope.togglingButton = 'STOP';
       $timeout(function() {
         //time decrease
         seconds--;
@@ -49,36 +54,42 @@ app.controller('TimeCtrl', function($scope, $timeout){
     } else {
       seconds += 1
       $scope.togglingButton = 'START'
-    }
+    };
   };
 
   //reset timer to 25 min
   $scope.resetTimer = function() {
-
   	//reset seconds to 25min
-  	seconds = 1500;
-  	seconds = countdown_type;
+    if ($scope.mode === 'Work') {
+        seconds = 1500;
+      } else if ($scope.mode === 'Break') {
+        seconds = 300;
+      } else {
+        console.log ('error');
+      };
   	$scope.counterSec = getUItime(seconds);
   };
 
-  $scope.breakTime = function() {
-	  	seconds = 300;
-	  	// countdown_type = seconds;
-  		$scope.counterSec = getUItime(seconds);
-	  	$scope.startTimer();
+  $scope.modeWork = function () {
+    $scope.mode = 'Break';
+    seconds = 1500;
+    $scope.workTextCol = 'white';
+    $scope.workBgCol = 'blue';
+    $scope.restTextCol = 'blue';
+    $scope.restBgCol = 'white';
+    $scope.counterSec = getUItime(seconds);
+    console.log ('the work bg should be blue: ' + $scope.workBgCol)
   };
 
-  $scope.workingMode = function() {
-  	//set time to 25 min
-  	seconds = 1500;
-  	$scope.counterSec = getUItime(seconds);
+  $scope.modeRest = function () {
+    $scope.mode = 'Work';
+    seconds = 300;
+    $scope.workTextCol = 'blue';
+    $scope.workBgCol = 'white';
+    $scope.restTextCol = 'white';
+    $scope.restBgCol = 'blue';
+    $scope.counterSec = getUItime(seconds);
+    console.log ('the work bg should be white: ' + $scope.workBgCol)
   };
-
-  $scope.breakMode = function() {
-  	//set time to 5 min
-  	seconds = 300;
-  	$scope.counterSec = getUItime(seconds);
-  };
-
 
 });

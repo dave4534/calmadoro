@@ -18,7 +18,9 @@
   "homepage": "https://github.com/dave4534/calmadoro#readme",
   "dependencies": {
     "angular": "^1.5.9",
+    "angular-bootstrap-toggle-switch": "^1.1.0",
     "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
     "font-awesome": "^4.7.0"
   }
 }
