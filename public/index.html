@@ -1,32 +1,46 @@
 <!DOCTYPE >
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+<!-- 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
 
  <!--    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
-  	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Calmadoro</title>
-</head>
 
-  <title></title>
+	<title>Calmadoro</title>
 </head>
 <body ng-app="calmadoro" ng-controller="TimeCtrl">
   <div class="container-fluid">
-    <div class="bgImage">{{timer}}
+    <div class="bgImage">
       <div class="row" >
         <img src="images/logo.png" class="logo" >
       </div>
       <div class="row">
-      <div class="timer"><!-- 25:00 -->
-      	{{counterSec}}
+      <div class="timer">
+        {{counterSec}}
       </div>
       </div>
       <div class="row">
         <div class="buttonContainer">
-          <button class="button" ng-click="startTimer()">Start</button>
-          <button class="button" ng-click="stopTimer()">Stop</button>
+          <button class="button" ng-click="startStop()">{{togglingButton}}</button>
           <button class="button" ng-click="resetTimer()">Reset</button>
-          <!-- <button class="button" ng-click="breakTime()">Break</button> -->
+        </div>
+          <hr>
+        <div class="modeContainer">
+
+          <button class="modebtn" id="work" ng-click="modeWork()" ng-style="{'color': '{{workTextCol}}', 'background-color':'{{workBgCol}}'}">
+            REST
+          </button>
+
+        	<button class="modebtn" id="work" ng-click="modeWork()" ng-style="{'color': '{{workTextCol}}', 'background-color':'{{workBgCol}}'}">
+            WORK
+          </button>
+          
+          <button class="modebtn" id="rest" ng-click="modeRest()" ng-style="{'color': '{{restTextCol}}', 'background-color':'{{restBgCol}}'}">
+            REST
+          </button>
         </div>
       </div>
       <div class="row musicPlayerBox">
@@ -50,7 +64,9 @@
 	<!-- script files -->
   <script src="node_modules/angular/angular.js"></script>
   <script src="app.js"></script>
+	<!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+  <script type="text/javascript" src="angular/angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
   <script src="controllers/timeCtrl.js"></script>
-
 </body>
 </html>
