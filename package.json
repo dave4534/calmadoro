@@ -4,7 +4,8 @@
   "description": "using angular.js and bootstrap",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,5 @@
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "font-awesome": "^4.7.0"
-  },
-  "devDependencies": {}
+  }
 }

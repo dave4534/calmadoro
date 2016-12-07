@@ -61,9 +61,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.resetTimer = function() {
   	//reset seconds to 25min
     if ($scope.mode === 'Work') {
-        seconds = 1500;
-      } else if ($scope.mode === 'Break') {
         seconds = 300;
+      } else if ($scope.mode === 'Break') {
+        seconds = 1500;
       } else {
         console.log ('error');
       };
