@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
  <!--    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
   	<link rel="stylesheet" type="text/css" href="style.css">
@@ -26,8 +27,13 @@
           <button class="button" ng-click="startTimer()">Start</button>
           <button class="button" ng-click="stopTimer()">Stop</button>
           <button class="button" ng-click="resetTimer()">Reset</button>
-          <button class="button" ng-click="breakTime()">Break</button>
+
         </div>
+        <div class="modeContainer">
+        		<a href="" ng-click="workingMode()">Working</a>
+        		<a href="" ng-click="breakMode()">Break</a>
+        </div>
+
       </div>
       <div class="row musicPlayerBox">
         <p class="playerHeader">PLAY SOME CHILL MUSIC</p>
@@ -48,6 +54,7 @@
   </div>
 
 	<!-- script files -->
+	<!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
   <script src="node_modules/angular/angular.js"></script>
   <script src="app.js"></script>
   <script src="controllers/timeCtrl.js"></script>
