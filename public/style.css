@@ -3,9 +3,6 @@
 @import url(http://allfont.net/allfont.css?fonts=montserrat-light);
 
 
-
-
-
 .bgImage {
   background: url(https://images.unsplash.com/photo-1469353680598-5dc830efef5c?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
   width: 100%;
@@ -152,3 +149,29 @@
   margin-left: 5px;
 }
 
+.modebtn {
+  -webkit-box-shadow: 0px 5px 8px #666666;
+  -moz-box-shadow: 0px 5px 8px #666666;
+  box-shadow: 0px 5px 8px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 10px;
+  text-decoration: none;
+  width:120px;
+}
+
+#workBtn {
+  color: red;
+  background-color: white;
+}
+
+#workBtn:enabled {
+  color: blue;
+  background-color: grey;
+}
+
+#restBtn {
+  color: black;
+  background-color: white;
+}
