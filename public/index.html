@@ -28,8 +28,13 @@
           <button class="button" ng-click="resetTimer()">Reset</button>
         </div>
         <div class="modeContainer">
-        		<a href="" ng-click="workingMode()">Working</a>
-        		<a href="" ng-click="breakMode()">Break</a>
+        	<button class="modebtn" id="work" ng-click="modeWork()" ng-style="{'color': '{{workTextCol}}', 'background-color':'{{workBgCol}}'}">
+            WORK
+          </button>
+          
+          <button class="modebtn" id="rest" ng-click="modeRest()" ng-style="{'color': '{{restTextCol}}', 'background-color':'{{restBgCol}}'}">
+            REST
+          </button>
         </div>
       </div>
       <div class="row musicPlayerBox">
