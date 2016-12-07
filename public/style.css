@@ -6,8 +6,9 @@
 .bgImage {
   background: url(https://images.unsplash.com/photo-1469353680598-5dc830efef5c?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
   width: 100%;
-  height: 750px;
-}
+  height: 100%;
+/*  background-size: cover;
+*/}
 
 .logo {
   background: url(images/logo.png);
@@ -68,22 +69,23 @@
 }
 
 .musicPlayerBox {
-  height: 200px;
-  width: 45%;
+  height: 160px;
+  width: 40%;
   margin: 0 auto;
   margin-top: 40px;
   border-radius: 8px;
-  background-color: #b1b9bb;
-  opacity: .4;
+  /*background-color: #b1b9bb;*/
+  /*opacity: .4;*/
 }
 
 .playerHeader {
   text-align: center;
-  color: white;
+  color: gray;
   font-family: 'Montserrat Light';
   font-size: 1.6em;
   letter-spacing: .1em;
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .musicPlayerButtonContainer {
@@ -133,7 +135,7 @@
 
 .poweredByContainer {
   text-align: center;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 
 .poweredBy {
@@ -175,3 +177,4 @@
   color: black;
   background-color: white;
 }
+
