@@ -57,7 +57,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
   	//reset seconds to 25min
   	seconds = 1500;
-  	seconds = countdown_type;
+  	// seconds = countdown_type;
   	$scope.counterSec = getUItime(seconds);
   };
 
