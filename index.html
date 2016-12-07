@@ -12,7 +12,7 @@
 </head>
 <body ng-app="calmadoro" ng-controller="TimeCtrl">
   <div class="container-fluid">
-    <div class="bgImage">{{timer}}
+    <div class="bgImage"><!-- {{timer}} -->
       <div class="row" >
         <img src="images/logo.png" class="logo" >
       </div>
@@ -23,10 +23,8 @@
       </div>
       <div class="row">
         <div class="buttonContainer">
-          <button class="button" ng-click="startTimer()">Start</button>
-          <button class="button" ng-click="stopTimer()">Stop</button>
+          <button class="button" ng-click="startStop()">{{togglingButton}}</button>
           <button class="button" ng-click="resetTimer()">Reset</button>
-          <!-- <button class="button" ng-click="breakTime()">Break</button> -->
         </div>
       </div>
       <div class="row musicPlayerBox">
