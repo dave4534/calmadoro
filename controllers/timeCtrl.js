@@ -1,6 +1,7 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-	 // $scope.timer = 'we are on board';
+	 $scope.timer = 'we are on board';
+   $scope.togglingButton = 'START'
 
 	//display timer on 25 min
 	var seconds = 1500;
@@ -29,31 +30,26 @@ app.controller('TimeCtrl', function($scope, $timeout){
 	$scope.counterSec = getUItime(seconds);
 	var isTimerRunning = false;
 
-	//start running timer
-	$scope.startTimer = function() {
-
-			isTimerRunning = true;
-
-	    $timeout(function() {
-	       //time decrease
-	       seconds--;
-	       $scope.counterSec = getUItime(seconds);
-	     	//timer running and not negative number
-	     	if(isTimerRunning && seconds > 0){
-		     $scope.startTimer();
-		     console.log($scope.counterSec);
-	     	}
-	     	// else {
-	     	// 	$scope.showStart  =  true;
-	     	// }
-    }, 1000);
-  };
-
-  //stop/pause timer
-  $scope.stopTimer = function(){
-   	 //stop the timer
-	   isTimerRunning = false;
-	   $scope.showStart  =  true;
+  //start-stop running timer
+  $scope.startStop = function() {
+    isTimerRunning = !isTimerRunning;
+    
+    if (isTimerRunning) {
+      $scope.togglingButton = 'STOP'
+      $timeout(function() {
+        //time decrease
+        seconds--;
+        $scope.counterSec = getUItime(seconds);
+        //timer running and not negative number
+        if(isTimerRunning && seconds > 0){
+          isTimerRunning = !isTimerRunning;
+          $scope.startStop();
+        }
+      }, 1000);
+    } else {
+      seconds += 1
+      $scope.togglingButton = 'START'
+    }
   };
 
   //reset timer to 25 min
