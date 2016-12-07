@@ -2,9 +2,10 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
 	 $scope.timer = 'we are on board';
    $scope.togglingButton = 'START'
+
 	//display timer on 25 min
 	var seconds = 1500;
-	var countdown_type = seconds;
+	// var countdown_type = seconds;
 
 	var getUItime = function(seconds){
 
@@ -28,7 +29,6 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
 	$scope.counterSec = getUItime(seconds);
 	var isTimerRunning = false;
-
 
   //start-stop running timer
   $scope.startStop = function() {
@@ -57,16 +57,28 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
   	//reset seconds to 25min
   	seconds = 1500;
-  	// seconds = countdown_type;
+  	seconds = countdown_type;
   	$scope.counterSec = getUItime(seconds);
   };
 
-  // $scope.breakTime = function() {
-  // 	seconds = 30;
-  // 	countdown_type = seconds;
-  // 	$scope.counterSec = getUItime(seconds);
-  // 	$scope.startTimer();
-  // };
+  $scope.breakTime = function() {
+	  	seconds = 300;
+	  	// countdown_type = seconds;
+  		$scope.counterSec = getUItime(seconds);
+	  	$scope.startTimer();
+  };
+
+  $scope.workingMode = function() {
+  	//set time to 25 min
+  	seconds = 1500;
+  	$scope.counterSec = getUItime(seconds);
+  };
+
+  $scope.breakMode = function() {
+  	//set time to 5 min
+  	seconds = 300;
+  	$scope.counterSec = getUItime(seconds);
+  };
 
 
 });
