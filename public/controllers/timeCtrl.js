@@ -38,7 +38,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
   //start-stop running timer
   $scope.startStop = function() {
     isTimerRunning = !isTimerRunning;
-    
+
     if (isTimerRunning) {
       $scope.togglingButton = 'STOP';
       $timeout(function() {
@@ -67,6 +67,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
       } else {
         console.log ('error');
       };
+  	// seconds = countdown_type;
   	$scope.counterSec = getUItime(seconds);
   };
 
