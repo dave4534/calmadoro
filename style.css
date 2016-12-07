@@ -31,6 +31,7 @@
 .buttonContainer {
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -55,6 +56,18 @@
 
 .button:active {
   border: 3px solid #f37854;
+}
+
+.modeContainer {
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.modeContainer a {
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px;
 }
 
 .musicPlayerBox {
