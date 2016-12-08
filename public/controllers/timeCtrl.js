@@ -55,9 +55,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
         }
       }, 1000);
     } else {
-      seconds += 1
-      $scope.togglingButton = 'START'
-    };
+      seconds += 1;
+      $scope.togglingButton = 'START';
+    }
   };
 
   //reset timer to 25 min
@@ -69,7 +69,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
         seconds = 1500;
       } else {
         console.log ('error');
-      };
+      }
   	// seconds = countdown_type;
   	$scope.counterSec = getUItime(seconds);
 
@@ -79,14 +79,12 @@ app.controller('TimeCtrl', function($scope, $timeout){
     $scope.mode = 'Break';
     seconds = 1500;
     $scope.counterSec = getUItime(seconds);
-    changecolors('towork');
   };
 
   $scope.modeRest = function () {
     $scope.mode = 'Work';
     seconds = 300;
     $scope.counterSec = getUItime(seconds);
-    changecolors('tobreak');
   };
 
   var changecolors = function (x) {

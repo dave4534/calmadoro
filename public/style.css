@@ -70,7 +70,7 @@
 
 .musicPlayerBox {
   height: 160px;
-  width: 40%;
+  /*width: 40%;*/
   margin: 0 auto;
   margin-top: 40px;
   border-radius: 8px;
@@ -100,6 +100,11 @@
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.iframe {
+    width: 30%;
+    margin: 0 auto;
 }
 
 .backButton {
