@@ -1,16 +1,18 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-  $scope.togglingButton = 'START';
-  $scope.mode = 'Break';
-  $scope.imgsrc = 'images/working.png';
-  $scope.workTextCol = 'white';
-  $scope.workBgCol = 'blue';
-  $scope.restTextCol = 'blue';
-  $scope.restBgCol = 'white';
+    $scope.togglingButton = 'START';
+    $scope.mode = 'Break';
+    $scope.workTextCol = 'white';
+    $scope.workBgCol = 'blue';
+    $scope.restTextCol = 'blue';
+    $scope.restBgCol = 'white';
+    $scope.imgOnOff = './images/OFF.png'
+    var bind = 'off'
+  	var seconds = 1500;
+    console.log ('working')
 
-	//display timer on 25 min
-	var seconds = 1500;
-	// var countdown_type = seconds;
+  // var initialize = function () {
+  // }
 
 	var getUItime = function(seconds){
 
@@ -74,23 +76,23 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.modeWork = function () {
     $scope.mode = 'Break';
     seconds = 1500;
-    $scope.workTextCol = 'white';
-    $scope.workBgCol = 'blue';
-    $scope.restTextCol = 'blue';
-    $scope.restBgCol = 'white';
     $scope.counterSec = getUItime(seconds);
-    console.log ('the work bg should be blue: ' + $scope.workBgCol)
   };
 
   $scope.modeRest = function () {
     $scope.mode = 'Work';
     seconds = 300;
-    $scope.workTextCol = 'blue';
-    $scope.workBgCol = 'white';
-    $scope.restTextCol = 'white';
-    $scope.restBgCol = 'blue';
     $scope.counterSec = getUItime(seconds);
-    console.log ('the work bg should be white: ' + $scope.workBgCol)
   };
+
+  $scope.bindingBtn = function () {
+    if (bind === 'off') {
+      $scope.imgOnOff = './images/ON.jpg'
+      bind = 'on'
+    } else {
+      $scope.imgOnOff  = './images/OFF.png'
+      bind = 'off'
+    }
+  }
 
 });

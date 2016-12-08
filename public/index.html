@@ -5,13 +5,14 @@
 <!--   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
   <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+  <script src="controllers/timeCtrl.js"></script>
 <!-- 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
 
  <!--    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
 
 	<title>Calmadoro</title>
 </head>
-<body ng-app="calmadoro" ng-controller="TimeCtrl">
+<body ng-app="calmadoro" ng-controller="TimeCtrl" onload="initialize();">
   <div class="container-fluid">
     <div class="bgImage">
       <div class="row" >
@@ -27,7 +28,9 @@
           <button class="button" ng-click="startStop()">{{togglingButton}}</button>
           <button class="button" ng-click="resetTimer()">Reset</button>
         </div>
+      </div>
           <hr>
+      <div class="row">
         <div class="modeContainer">
 
         	<button class="modebtn" id="work" ng-click="modeWork()" ng-style="{'color': '{{workTextCol}}', 'background-color':'{{workBgCol}}'}">
@@ -37,7 +40,14 @@
           <button class="modebtn" id="rest" ng-click="modeRest()" ng-style="{'color': '{{restTextCol}}', 'background-color':'{{restBgCol}}'}">
             REST
           </button>
-
+        </div>
+      </div>
+      <div class="bindRow">
+        <p class="bindingBtn">
+          Clock-Music bind:
+        </p>
+        <div class="onOffPic">
+          <img class="onOffBtn" ng-click="bindingBtn" src="{{imgOnOff}}">
         </div>
       </div>
       <div class="row musicPlayerBox">
@@ -66,6 +76,5 @@
 
   <script type="text/javascript" src="angular/angular.js"></script>
   <script type="text/javascript" src="app.js"></script>
-  <script src="controllers/timeCtrl.js"></script>
 </body>
 </html>

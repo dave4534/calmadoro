@@ -179,3 +179,16 @@
   color: black;
   background-color: white;
 }
+
+.bindRow {
+  display: inline-block;
+}
+
+.bindingBtn {
+  text-align: center;
+}
+
+.onOffBtn {
+  width: 200px;
+  height: 100px;
+}
