@@ -2,8 +2,8 @@
 <html>
 <head>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"> -->
 
@@ -28,17 +28,15 @@
           <button class="button" ng-click="resetTimer()">Reset</button>
         </div>
       </div>
-          <hr>
       <div class="row">
         <div class="modeContainer">
 
-        	<button class="modebtn" id="work" ng-click="modeWork();" ng-style="{'background-color':'{{workBgCol}}'}">WORK</button>
+        	<button class="modebtn" id="work" ng-click="modeWork();">WORK</button>
 
-          <button class="modebtn" id="rest" ng-click="modeRest();" ng-style="{'background-color':'{{restBgCol}}'}">REST</button>
+          <button class="modebtn" id="rest" ng-click="modeRest();" >REST</button>
         </div>
       </div>
-        <hr>
-      <div class="bindRow">
+      <div class="bindRow" ng-hide=true>
         <p class="bindingBtn">
           Clock-Music bind:
         </p>

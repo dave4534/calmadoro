@@ -2,11 +2,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
     $scope.togglingButton = 'START';
     $scope.mode = 'Break';
-    $scope.workBgCol = 'green';
-    $scope.restBgCol = 'red';
-    $scope.onoff = 'OFF'
-    var bind = 'off'
-  	var seconds = 1500;
+    $scope.onoff = 'OFF';
+    var bind = 'off';
+    var seconds = 1500;
 
   // function initialize() {
   //   console.log ('working');
@@ -22,9 +20,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
 				// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
 				// if (hh > 12) {hh = hh % 12;}
 				// These lines ensure you have two-digits
-				if (hh < 10) {hh = "0"+hh;};
-				if (mm < 10) {mm = "0"+mm;};
-				if (ss < 10) {ss = "0"+ss;};
+				if (hh < 10) {hh = "0"+hh;}
+				if (mm < 10) {mm = "0"+mm;}
+				if (ss < 10) {ss = "0"+ss;}
 				// This formats your string to HH:MM:SS
 				// var result = hh+":"+mm+":"+ss;
 				var result = mm+":"+ss;
@@ -50,8 +48,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
           isTimerRunning = !isTimerRunning;
           $scope.startStop();
         } else {
-          seconds -= 1
-          alert ('time is over!')
+          alertMe();
         }
       }, 1000);
     } else {
@@ -70,8 +67,8 @@ app.controller('TimeCtrl', function($scope, $timeout){
       } else {
         console.log ('error');
       }
-  	// seconds = countdown_type;
-  	$scope.counterSec = getUItime(seconds);
+
+    $scope.counterSec = getUItime(seconds);
 
   };
 
@@ -87,26 +84,19 @@ app.controller('TimeCtrl', function($scope, $timeout){
     $scope.counterSec = getUItime(seconds);
   };
 
-  var changecolors = function (x) {
-    if (x === 'towork') {
-      $scope.workBgCol = 'red';
-      $scope.restBgCol = 'green';
-      console.log(x);
-    } else {
-      $scope.workBgCol = 'green';
-      $scope.restBgCol = 'red';
-      console.log(x);
-    };
-  }
-
   $scope.bindingBtn = function () {
     if (bind === 'off') {
-      $scope.onoff = 'ON'
-      bind = 'on'
+      $scope.onoff = 'ON';
+      bind = 'on';
     } else {
-      $scope.onoff  = 'OFF'
-      bind = 'off'
+      $scope.onoff  = 'OFF';
+      bind = 'off';
     }
-  }
+  };
+
+  var alertMe = function() {
+   var audio = new Audio('audio/buzzer.mp3');
+   audio.play();
+  };
 
 });
