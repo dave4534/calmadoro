@@ -5,14 +5,15 @@
 <!--   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
   <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
-  <script src="controllers/timeCtrl.js"></script>
 <!-- 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
 
  <!--    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
 
 	<title>Calmadoro</title>
 </head>
-<body ng-app="calmadoro" ng-controller="TimeCtrl" onload="initialize();">
+<body ng-app="calmadoro" ng-controller="TimeCtrl">
+<!-- onload="initialize();" -->
+
   <div class="container-fluid">
     <div class="bgImage">
       <div class="row" >
@@ -33,22 +34,19 @@
       <div class="row">
         <div class="modeContainer">
 
-        	<button class="modebtn" id="work" ng-click="modeWork()" ng-style="{'color': '{{workTextCol}}', 'background-color':'{{workBgCol}}'}">
-            WORK
-          </button>
+        	<button class="modebtn" id="work" ng-click="modeWork();" ng-style="{'background-color':'{{workBgCol}}'}">WORK</button>
 
-          <button class="modebtn" id="rest" ng-click="modeRest()" ng-style="{'color': '{{restTextCol}}', 'background-color':'{{restBgCol}}'}">
-            REST
-          </button>
+          <button class="modebtn" id="rest" ng-click="modeRest();" ng-style="{'background-color':'{{restBgCol}}'}">REST</button>
         </div>
       </div>
+        <hr>
       <div class="bindRow">
         <p class="bindingBtn">
           Clock-Music bind:
         </p>
-        <div class="onOffPic">
-          <img class="onOffBtn" ng-click="bindingBtn" src="{{imgOnOff}}">
-        </div>
+        <button ng-click="bindingBtn()">
+          {{onoff}}
+        </button>
       </div>
       <div class="row musicPlayerBox">
         <p class="playerHeader">PLAY SOME CHILL MUSIC</p>
@@ -76,5 +74,6 @@
 
   <script type="text/javascript" src="angular/angular.js"></script>
   <script type="text/javascript" src="app.js"></script>
+  <script src="controllers/timeCtrl.js"></script>
 </body>
 </html>

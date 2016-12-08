@@ -2,17 +2,15 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
     $scope.togglingButton = 'START';
     $scope.mode = 'Break';
-    $scope.workTextCol = 'white';
-    $scope.workBgCol = 'blue';
-    $scope.restTextCol = 'blue';
-    $scope.restBgCol = 'white';
-    $scope.imgOnOff = './images/OFF.png'
+    $scope.workBgCol = 'green';
+    $scope.restBgCol = 'red';
+    $scope.onoff = 'OFF'
     var bind = 'off'
   	var seconds = 1500;
-    console.log ('working')
 
-  // var initialize = function () {
-  // }
+  // function initialize() {
+  //   console.log ('working');
+  // };
 
 	var getUItime = function(seconds){
 
@@ -48,9 +46,12 @@ app.controller('TimeCtrl', function($scope, $timeout){
         seconds--;
         $scope.counterSec = getUItime(seconds);
         //timer running and not negative number
-        if(isTimerRunning && seconds > 0){
+        if(seconds > 0){
           isTimerRunning = !isTimerRunning;
           $scope.startStop();
+        } else {
+          seconds -= 1
+          alert ('time is over!')
         }
       }, 1000);
     } else {
@@ -71,26 +72,41 @@ app.controller('TimeCtrl', function($scope, $timeout){
       };
   	// seconds = countdown_type;
   	$scope.counterSec = getUItime(seconds);
+
   };
 
   $scope.modeWork = function () {
     $scope.mode = 'Break';
     seconds = 1500;
     $scope.counterSec = getUItime(seconds);
+    changecolors('towork');
   };
 
   $scope.modeRest = function () {
     $scope.mode = 'Work';
     seconds = 300;
     $scope.counterSec = getUItime(seconds);
+    changecolors('tobreak');
   };
+
+  var changecolors = function (x) {
+    if (x === 'towork') {
+      $scope.workBgCol = 'red';
+      $scope.restBgCol = 'green';
+      console.log(x);
+    } else {
+      $scope.workBgCol = 'green';
+      $scope.restBgCol = 'red';
+      console.log(x);
+    };
+  }
 
   $scope.bindingBtn = function () {
     if (bind === 'off') {
-      $scope.imgOnOff = './images/ON.jpg'
+      $scope.onoff = 'ON'
       bind = 'on'
     } else {
-      $scope.imgOnOff  = './images/OFF.png'
+      $scope.onoff  = 'OFF'
       bind = 'off'
     }
   }
