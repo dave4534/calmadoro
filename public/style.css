@@ -167,19 +167,3 @@
   text-decoration: none;
   width:120px;
 }
-
-#workBtn {
-  color: red;
-  background-color: white;
-}
-
-#workBtn:enabled {
-  color: blue;
-  background-color: grey;
-}
-
-#restBtn {
-  color: black;
-  background-color: white;
-}
-
