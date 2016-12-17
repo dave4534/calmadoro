@@ -2,7 +2,7 @@
   "name": "calmadoro",
   "version": "1.0.0",
   "description": "using angular.js and bootstrap",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dave4534/calmadoro#readme",
   "dependencies": {
     "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
