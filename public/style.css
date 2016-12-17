@@ -81,6 +81,14 @@
   margin: 0 auto;
 }
 
+.ytp-title {
+    font-size: 105%;
+}
+
+a.ytp-title-link.yt-uix-sessionlink {
+    font-size: 12px;
+}
+
 .playerHeader {
   text-align: center;
   color: gray;

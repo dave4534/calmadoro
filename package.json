@@ -2,7 +2,7 @@
   "name": "calmadoro",
   "version": "1.0.0",
   "description": "using angular.js and bootstrap",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
