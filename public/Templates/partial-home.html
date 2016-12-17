@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="timer">
+    {{counterSec}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="suggested-time">
+    <div class="time-for-work" ng-show="({{mode}} === Work)">
+      
+    </div>
+    <div class="time-for-break" ng-hide="({{mode}} === Break)">
+      
+    </div>
+  </div>  
+</div>
+
+<div class="row">
+  <div class="buttonContainer">
+    <button class="button" ng-click="startStop()">{{togglingButton}}</button>
+    <button class="button" ng-click="resetTimer()">Reset</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="modeContainer">
+
+    <button class="modebtn" id="work" ng-click="modeWork();">WORK</button>
+
+    <button class="modebtn" id="rest" ng-click="modeRest();" >REST</button>
+  </div>
+</div>
+
+<div class="bindRow" ng-hide=true>
+  <p class="bindingBtn">
+    Clock-Music bind:
+  </p>
+  <button ng-click="bindingBtn()">
+    {{onoff}}
+  </button>
+</div>
+
+
+<!-- NO DEFAULT -->
+<div class="pick-music">
+  <h4>Time to pick your music source:</h4>
+  <a ui-sref=".spotify" class="btn btn-primary">Spotify</a>
+  <a ui-sref=".youtube" class="btn btn-primary">Youtube</a>
+  <a ui-sref=".radio" class="btn btn-primary">Radio</a>
+</div>
+
+
+<div ui-view></div>
