@@ -1,14 +1,22 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-    $scope.togglingButton = 'START';
-    $scope.mode = 'Break';
-    $scope.onoff = 'OFF';
-    var bind = 'off';
-    var seconds = 1500;
+  $scope.togglingButton = 'START';
+  $scope.mode = 'Break';
+  $scope.onoff = 'OFF';
+  var bind = 'off';
+  seconds = 1500;
+
+  $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
+  $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
 
   // function initialize() {
   //   console.log ('working');
   // };
+
+  //needs to be fixed!!!!!!!!!!!!!
+  $scope.setTimeTo = function (setSeconds) {
+    seconds = setSeconds
+  }
 
 	var getUItime = function(seconds){
 
@@ -20,9 +28,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
 				// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
 				// if (hh > 12) {hh = hh % 12;}
 				// These lines ensure you have two-digits
-				if (hh < 10) {hh = "0"+hh;}
-				if (mm < 10) {mm = "0"+mm;}
-				if (ss < 10) {ss = "0"+ss;}
+				if (hh < 10) {hh = "0"+ hh;}
+				if (mm < 10) {mm = "0"+ mm;}
+				if (ss < 10) {ss = "0"+ ss;}
 				// This formats your string to HH:MM:SS
 				// var result = hh+":"+mm+":"+ss;
 				var result = mm+":"+ss;
@@ -61,9 +69,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.resetTimer = function() {
   	//reset seconds to 25min
     if ($scope.mode === 'Work') {
-        seconds = 300;
+        setTimeTo(300);
       } else if ($scope.mode === 'Break') {
-        seconds = 1500;
+        setTimeTo(1500);
       } else {
         console.log ('error');
       }
@@ -74,13 +82,13 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
   $scope.modeWork = function () {
     $scope.mode = 'Break';
-    seconds = 1500;
+    setTimeTo(1500)
     $scope.counterSec = getUItime(seconds);
   };
 
   $scope.modeRest = function () {
     $scope.mode = 'Work';
-    seconds = 300;
+    setTimeTo(300);
     $scope.counterSec = getUItime(seconds);
   };
 
