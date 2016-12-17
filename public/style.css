@@ -183,3 +183,37 @@
   font-weight: bold;
 }
 
+.suggestions {
+  margin: 3px;
+}
+
+.suggested-time {
+  margin-top: -40px;
+  text-align: center;
+}
+
+.pick-music {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+  .button {
+    width: 20%;
+    font-size: 1em;
+  }
+  .modebtn {
+    width: 17%;
+    font-size: .9em;
+  }
+  .timer {
+    font-size: 6em;
+    margin-bottom: 10px;
+  }
+  .logo {
+    width: 250px;
+  }
+  .playerHeader {
+    font-size: 1.2em;
+  }
+}

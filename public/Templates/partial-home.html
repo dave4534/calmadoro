@@ -6,12 +6,15 @@
 
 <div class="row">
   <div class="suggested-time">
-    <div class="time-for-work" ng-show="({{mode}} === Work)">
-      
+    
+    <div class="time-for-work" ng-show="(mode === 'Break')">
+      <button class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo()">{{min}}</button>
     </div>
-    <div class="time-for-break" ng-hide="({{mode}} === Break)">
-      
+
+    <div class="time-for-break" ng-show="(mode === 'Work')">
+      <button class="suggestions" ng-repeat="min in breakMin" ng-click="setTimeTo()">{{min}}</button>
     </div>
+  
   </div>  
 </div>
 
