@@ -13,45 +13,41 @@ app.controller('TimeCtrl', function($scope, $timeout){
   //   console.log ('working');
   // };
 
-  //needs to be fixed!!!!!!!!!!!!!
+  //Works! I need to work on the Customize option!
   $scope.setTimeTo = function (setSeconds) {
-    seconds = setSeconds
+    seconds = setSeconds;
+    $scope.counterSec = getUItime(setSeconds);
   }
 
-	var getUItime = function(seconds){
-
-				// multiply by 1000 because Date() requires miliseconds
-				var date = new Date(seconds * 1000);
-				var hh = date.getUTCHours();
-				var mm = date.getUTCMinutes();
-				var ss = date.getSeconds();
-				// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
-				// if (hh > 12) {hh = hh % 12;}
-				// These lines ensure you have two-digits
-				if (hh < 10) {hh = "0"+ hh;}
-				if (mm < 10) {mm = "0"+ mm;}
-				if (ss < 10) {ss = "0"+ ss;}
-				// This formats your string to HH:MM:SS
-				// var result = hh+":"+mm+":"+ss;
-				var result = mm+":"+ss;
-
+	var getUItime = function(seconds) {
+  // multiply by 1000 because Date() requires miliseconds
+      var date = new Date(seconds * 1000);
+      var hh = date.getUTCHours();
+      var mm = date.getUTCMinutes();
+      var ss = date.getSeconds();
+      // If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
+      // if (hh > 12) {hh = hh % 12;}
+      // These lines ensure you have two-digits
+      if (hh < 10) {hh = "0"+ hh;}
+      if (mm < 10) {mm = "0"+ mm;}
+      if (ss < 10) {ss = "0"+ ss;}
+      // This formats your string to HH:MM:SS
+      // var result = hh+":"+mm+":"+ss;
+      var result = mm + ":" + ss;
   	return result;
   };
 
 	$scope.counterSec = getUItime(seconds);
 	var isTimerRunning = false;
 
-  //start-stop running timer
   $scope.startStop = function() {
     isTimerRunning = !isTimerRunning;
 
     if (isTimerRunning) {
       $scope.togglingButton = 'STOP';
       $timeout(function() {
-        //time decrease
         seconds--;
         $scope.counterSec = getUItime(seconds);
-        //timer running and not negative number
         if(seconds > 0){
           isTimerRunning = !isTimerRunning;
           $scope.startStop();
@@ -65,30 +61,27 @@ app.controller('TimeCtrl', function($scope, $timeout){
     }
   };
 
-  //reset timer to 25 min
   $scope.resetTimer = function() {
-  	//reset seconds to 25min
     if ($scope.mode === 'Work') {
-        setTimeTo(300);
+        $scope.setTimeTo(300);
       } else if ($scope.mode === 'Break') {
-        setTimeTo(1500);
+        $scope.setTimeTo(1500);
       } else {
         console.log ('error');
       }
-
     $scope.counterSec = getUItime(seconds);
 
   };
 
   $scope.modeWork = function () {
     $scope.mode = 'Break';
-    setTimeTo(1500)
+    $scope.setTimeTo(1500)
     $scope.counterSec = getUItime(seconds);
   };
 
   $scope.modeRest = function () {
     $scope.mode = 'Work';
-    setTimeTo(300);
+    $scope.setTimeTo(300);
     $scope.counterSec = getUItime(seconds);
   };
 
