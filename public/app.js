@@ -9,17 +9,17 @@ $stateProvider
     templateUrl: './templates/partial-home.html'
     })
     .state('home.spotify', {
-    url: '/music',
+    url: '/spotify',
     controller: 'TimeCtrl',
     templateUrl:'./templates/partial-music-spotify.html'
     })
     .state('home.youtube', {
-    url: '/music',
+    url: '/youtube',
     controller: 'TimeCtrl',
     templateUrl:'./templates/partial-music-youtube.html'
     })    
     .state('home.radio', {
-    url: '/music',
+    url: '/radio',
     controller: 'TimeCtrl',
     templateUrl:'./templates/partial-music-radio.html'
     })
