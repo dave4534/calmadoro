@@ -3,6 +3,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.togglingButton = 'START';
   $scope.mode = 'Break';
   $scope.onoff = 'OFF';
+  $scope.customMin = false;
   var bind = 'off';
   seconds = 1500;
 
@@ -16,7 +17,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
       seconds = setSeconds;
       $scope.counterSec = getUItime(setSeconds);
     } else {
-      $scope.customMin = true;
+      $scope.customMin = !$scope.customMin
     }
   };
 
