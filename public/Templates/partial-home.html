@@ -9,10 +9,18 @@
     
     <div class="time-for-work" ng-show="(mode === 'Break')">
       <button class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo(min*60)">{{min}}</button>
+      <span class="suggestions" ng-show=customMin>
+        <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
+        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+      </span>
     </div>
 
     <div class="time-for-break" ng-show="(mode === 'Work')">
       <button class="suggestions" ng-repeat="min in breakMin" ng-click="setTimeTo(min*60)">{{min}}</button>
+      <span class="suggestions" ng-show=customMin>
+        <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
+        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+      </span>
     </div>
   
   </div>  

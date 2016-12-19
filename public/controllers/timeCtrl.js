@@ -9,15 +9,16 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
   $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
 
-  // function initialize() {
-  //   console.log ('working');
-  // };
 
   //Works! I need to work on the Customize option!
   $scope.setTimeTo = function (setSeconds) {
-    seconds = setSeconds;
-    $scope.counterSec = getUItime(setSeconds);
-  }
+    if (setSeconds) {
+      seconds = setSeconds;
+      $scope.counterSec = getUItime(setSeconds);
+    } else {
+      $scope.customMin = true;
+    }
+  };
 
 	var getUItime = function(seconds) {
   // multiply by 1000 because Date() requires miliseconds
