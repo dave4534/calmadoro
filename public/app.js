@@ -17,7 +17,7 @@ $stateProvider
     url: '/youtube',
     controller: 'TimeCtrl',
     templateUrl:'./templates/partial-music-youtube.html'
-    })
+    });
     // .state('home.radio', {
     // url: '/radio',
     // controller: 'TimeCtrl',
