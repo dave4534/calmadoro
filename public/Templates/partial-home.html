@@ -4,9 +4,9 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="suggested-time">
-    
+
     <div class="time-for-work" ng-show="(mode === 'Break')">
       <button class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo(min*60)">{{min}}</button>
       <span class="suggestions" ng-show=customMin>
@@ -22,9 +22,9 @@
         <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
       </span>
     </div>
-  
-  </div>  
-</div>
+
+  </div>
+</div> -->
 
 <div class="row">
   <div class="buttonContainer">
@@ -57,8 +57,9 @@
   <h4>Time to pick your music source:</h4>
   <a ui-sref=".spotify" class="btn btn-primary">Spotify</a>
   <a ui-sref=".youtube" class="btn btn-primary">Youtube</a>
-  <a ui-sref=".radio" class="btn btn-primary">Radio</a>
+  <!-- <a ui-sref=".radio" class="btn btn-primary">Radio</a> -->
 </div>
 
 
 <div ui-view></div>
+
