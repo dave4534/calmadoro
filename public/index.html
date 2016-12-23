@@ -17,7 +17,15 @@
         <img src="images/logo.png" class="logo" >
       </div>
 
+
       <div ui-view></div>
+
+  <!-- NO DEFAULT -->
+<div class="music-source-container">
+  <button class="music-source-button" ui-sref="home.spotify">Spotify</button> 
+  <button class="music-source-button" ui-sref="home.youtube">Youtube</button>
+  <!-- <a ui-sref=".radio" class="btn btn-primary">Radio</a> -->
+</div>
 
         <!-- FEEDBACK -->
         <div class="footer">
