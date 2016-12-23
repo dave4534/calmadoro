@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Glegoo');
 @import url(http://allfont.net/allfont.css?fonts=montserrat-light);
 
+* {
+  text-decoration: none;
+}
 
 .bgImage {
   background: url(https://images.unsplash.com/photo-1469353680598-5dc830efef5c?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
@@ -68,13 +71,10 @@
 }
 
 .musicPlayerBox {
-  height: 160px;
   width: 40%;
   margin: 0 auto;
   margin-top: 28px;
   border-radius: 8px;
-  /*background-color: #b1b9bb;*/
-  /*opacity: .4;*/
 }
 
 .iframe {
@@ -192,9 +192,34 @@
   text-align: center;
 }
 
-.pick-music {
+.music-source-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.music-source-button {
+  color: grey;
+  font-size: .8em;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  background-color:transparent;
+  letter-spacing: .08em;
+  border-radius: 3px;
+  outline: none;
+  border: .5px solid grey;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 11%;
+  height: 30px;
+  display: inline-block;
+}
+
+.music-source-button:hover {
+  border: 2px solid grey;
+}
+
+.music-source-button:focus {
+  border: 2px solid grey;
 }
 
 .footer {
@@ -248,5 +273,8 @@
   }
   .playerHeader {
     font-size: 1.2em;
+  }
+  .music-source-button {
+    width: 22%;
   }
 }
