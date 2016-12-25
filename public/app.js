@@ -24,6 +24,6 @@ $stateProvider
     // templateUrl:'./templates/partial-music-radio.html'
     // })
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/home/youtube');
 
 }]);

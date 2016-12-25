@@ -36,35 +36,37 @@
 <div class="row">
   <div class="modeContainer">
 
-    <button class="modebtn" id="work" ng-click="modeWork();">WORK</button>
+    <button class="modebtn" id="work" ng-click="modeWorkBreak('Work');" style={{wstyle}}>
+      WORK
+    </button>
 
-    <button class="modebtn" id="rest" ng-click="modeRest();" >REST</button>
+    <button class="modebtn" id="rest" ng-click="modeWorkBreak('Break');" style={{bstyle}}>
+      BREAK
+    </button>
   </div>
 </div>
 
-<div class="bindRow" ng-hide=true>
+
+<!-- **********BINDING BUTTON v0.0.1********** -->
+<!-- <div class="bindRow">
   <p class="bindingBtn">
     Clock-Music bind:
   </p>
   <button ng-click="bindingBtn()">
     {{onoff}}
   </button>
-</div>
-
-
-<div ui-view>
-  <div class="row musicPlayerBox">
-  <p class="playerHeader">PLAY SOME CHILL MUSIC</p>
-  <div class="iframe">
-    <iframe width="100%" height="100" src="https://www.youtube.com/embed/DCoY5ot8zg4" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <!-- NO DEFAULT -->
-<!-- <div class="pick-music">
-  <a ui-sref=".spotify" class="btn btn-primary">Spotify</a>
-  <a ui-sref=".youtube" class="btn btn-primary">Youtube</a>
 </div> -->
 
-</div>
-</div>
+<div ui-view></div>
 
+<div class="music-source-container">
+  <button class="music-source-button" ui-sref="home.spotify" ng-click="musicstyle('Spotify');" style={{spotStyle}}>
+    Spotify
+  </button> 
+  <button class="music-source-button" ui-sref="home.youtube" ng-click="musicstyle('Youtube');" style={{youStyle}}>
+    Youtube
+  </button>
+  <!-- <button class="music-source-button" ui-sref="home.radio">
+    Radio
+  </button> -->
+</div>

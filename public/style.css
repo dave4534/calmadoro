@@ -61,7 +61,6 @@
 .modeContainer {
   margin: 0 auto;
   text-align: center;
-
 }
 
 .modeContainer a {
@@ -77,10 +76,6 @@
   border-radius: 8px;
 }
 
-.iframe {
-  margin: 0 auto;
-}
-
 .playerHeader {
   text-align: center;
   color: gray;
@@ -89,69 +84,6 @@
   letter-spacing: .1em;
   margin-top: 20px;
   margin-bottom: 15px;
-}
-
-.musicPlayerButtonContainer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.musicPlayerButton {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.backButton {
-  transform: rotate(180deg);
-  height: 30px;
-  width: 30px;
-}
-
-.musicPlayerButton:hover {
-  color: green;
-}
-
-.nextButton {
-  height: 30px;
-  width: 30px;
-}
-
-.playerTimeline {
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  width: 80%;
-  margin: 0 auto;
-  /*margin-top: 20px;*/
-}
-
-.nowPlaying {
-  text-align: center;
-  font-family: 'Montserrat Light';
-  color: white;
-  letter-spacing: .1em;
-  margin-top: 12px;
-}
-
-.poweredByContainer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.poweredBy {
-  display: inline-block;
-  font-family: 'Montserrat Light';
-  letter-spacing: .04em;
-  font-size: .9em;
-}
-
-.spotifyLogo {
-  display: inline-block;
-  height: 25px;
-  margin-left: 5px;
 }
 
 .modebtn {
@@ -178,20 +110,6 @@
   border: 3px solid grey;
 }
 
-.modebtn:focus {
-  border: 2px solid grey;
-  font-weight: bold;
-}
-
-.suggestions {
-  margin: 3px;
-}
-
-.suggested-time {
-  margin-top: -40px;
-  text-align: center;
-}
-
 .music-source-container {
   text-align: center;
   margin-top: 20px;
@@ -215,10 +133,6 @@
 }
 
 .music-source-button:hover {
-  border: 2px solid grey;
-}
-
-.music-source-button:focus {
   border: 2px solid grey;
 }
 
@@ -278,3 +192,79 @@
     width: 22%;
   }
 }
+
+/*.suggestions {
+  margin: 3px;
+}*/
+
+/*.suggested-time {
+  margin-top: -40px;
+  text-align: center;
+}*/
+
+/*.iframe {
+  margin: 0 auto;
+}*/
+
+/*.musicPlayerButtonContainer {
+  text-align: center;
+  margin-top: 20px;
+}*/
+
+/*.musicPlayerButton {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}*/
+
+/*.backButton {
+  transform: rotate(180deg);
+  height: 30px;
+  width: 30px;
+}*/
+
+/*.musicPlayerButton:hover {
+  color: green;
+}*/
+
+/*.nextButton {
+  height: 30px;
+  width: 30px;
+}*/
+
+/*.playerTimeline {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}*/
+
+/*.nowPlaying {
+  text-align: center;
+  font-family: 'Montserrat Light';
+  color: white;
+  letter-spacing: .1em;
+  margin-top: 12px;
+}*/
+
+/*.poweredByContainer {
+  text-align: center;
+  margin-top: 30px;
+}*/
+
+/*.poweredBy {
+  display: inline-block;
+  font-family: 'Montserrat Light';
+  letter-spacing: .04em;
+  font-size: .9em;
+}*/
+
+/*.spotifyLogo {
+  display: inline-block;
+  height: 25px;
+  margin-left: 5px;
+}*/
