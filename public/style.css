@@ -190,11 +190,23 @@
 }
 
 .suggestions {
-  margin: 3px;
+    margin: 3px;
+    display: inline-block;
+    font-family: 'Montserrat-light';
+    text-transform: uppercase;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 4px 22px;
+    font-size: 1em;
+    letter-spacing: .07em;
+}
+
+.suggestions:hover {
+  cursor: pointer;
 }
 
 .suggested-time {
-  margin-top: -40px;
+  margin: -40px 0 23px 0;
   text-align: center;
 }
 
