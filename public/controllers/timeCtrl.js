@@ -11,10 +11,10 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.youStyle = selectedStyle;
   // $scope.onoff = 'OFF';
   // var bind = 'off';
-  // $scope.customMin = false;
+  $scope.customMin = false;
 
-  // $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
-  // $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
+  $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
+  $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
 
 
   $scope.setTimeTo = function (setSeconds) {
