@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var port = 8000;
+var port = (process.env.PORT || '8000');
 
 var app = express();
 
@@ -22,4 +22,3 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
 	console.log(' server app is up, listening on', port);
 });
-
