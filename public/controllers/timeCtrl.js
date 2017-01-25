@@ -14,16 +14,16 @@ app.controller('TimeCtrl', function($scope, $timeout){
   // $scope.onoff = 'OFF';
   // var bind = 'off';
 
-  $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
-  $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
+  $scope.workMin = [15, 20, 25, 30, 35, 'Custom...'];
+  $scope.breakMin = [3, 4, 5, 6, 7, 'Custom...'];
 
 
   $scope.setTimeTo = function (setSeconds) {
     if (setSeconds) {
       if ($scope.mode === 'Work') {
-        $scope.hello2 = setSeconds
+        $scope.workCustom = setSeconds
       } else {
-        $scope.hello = setSeconds
+        $scope.breakCustom = setSeconds
       }
       seconds = setSeconds;
       $scope.counterSec = getUItime(seconds);
@@ -86,14 +86,14 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.resetTimer = function() {
 
     if ($scope.mode === 'Work') {
-        if ($scope.hello2) { $scope.setTimeTo($scope.hello2); }
+        if ($scope.workCustom) { $scope.setTimeTo($scope.workCustom); }
         else { $scope.setTimeTo(1500)}
 
         //stop the timer if it is running
         if (isTimerRunning) { $scope.startStop(); }
 
     } else if ($scope.mode === 'Break') {
-        if ($scope.hello) { $scope.setTimeTo($scope.hello); }
+        if ($scope.breakCustom) { $scope.setTimeTo($scope.breakCustom); }
         else {$scope.setTimeTo(300)}
 
         //stop the timer if it is running
