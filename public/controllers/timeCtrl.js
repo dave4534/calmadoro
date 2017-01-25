@@ -9,22 +9,32 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.bstyle = selectedStyle;
   $scope.spotStyle = notSelectedStyle;
   $scope.youStyle = selectedStyle;
+  var isTimerRunning = false;
+  $scope.customMin = false;
   // $scope.onoff = 'OFF';
   // var bind = 'off';
-  $scope.customMin = false;
 
-  $scope.workMin = [15, 20, 25, 30, 35, 'Customize...'];
-  $scope.breakMin = [3, 4, 5, 6, 7, 'Customize...'];
+  $scope.workMin = [15, 20, 25, 30, 35, 'Custom...'];
+  $scope.breakMin = [3, 4, 5, 6, 7, 'Custom...'];
 
 
   $scope.setTimeTo = function (setSeconds) {
     if (setSeconds) {
+      if ($scope.mode === 'Work') {
+        $scope.workCustom = setSeconds
+      } else {
+        $scope.breakCustom = setSeconds
+      }
       seconds = setSeconds;
-      $scope.counterSec = getUItime(setSeconds);
+      $scope.counterSec = getUItime(seconds);
+        if (isTimerRunning) {
+          $scope.startStop();
+        }
     } else {
       $scope.customMin = !$scope.customMin
     }
   };
+
 
   var getUItime = function(seconds) {
   // multiply by 1000 because Date() requires miliseconds
@@ -39,13 +49,17 @@ app.controller('TimeCtrl', function($scope, $timeout){
       if (mm < 10) {mm = "0"+ mm;}
       if (ss < 10) {ss = "0"+ ss;}
       // This formats your string to HH:MM:SS
-      // var result = hh+":"+mm+":"+ss;
-      var result = mm + ":" + ss;
+      if (hh>0) {
+        var result = hh+":"+mm+":"+ss;
+      } else {
+        var result = mm + ":" + ss;
+      }
     return result;
   };
 
+
   $scope.counterSec = getUItime(seconds);
-  var isTimerRunning = false;
+
 
   $scope.startStop = function() {
     isTimerRunning = !isTimerRunning;
@@ -68,39 +82,45 @@ app.controller('TimeCtrl', function($scope, $timeout){
     }
   };
 
+
   $scope.resetTimer = function() {
+
     if ($scope.mode === 'Work') {
-        $scope.setTimeTo(1500);
-        if (isTimerRunning) {
-          $scope.startStop();
-        }
-      } else if ($scope.mode === 'Break') {
-        $scope.setTimeTo(300);
-        if (isTimerRunning) {
-          $scope.startStop();
-        }
-      } else {
+        if ($scope.workCustom) { $scope.setTimeTo($scope.workCustom); }
+        else { $scope.setTimeTo(1500)}
+
+        //stop the timer if it is running
+        if (isTimerRunning) { $scope.startStop(); }
+
+    } else if ($scope.mode === 'Break') {
+        if ($scope.breakCustom) { $scope.setTimeTo($scope.breakCustom); }
+        else {$scope.setTimeTo(300)}
+
+        //stop the timer if it is running
+        if (isTimerRunning) { $scope.startStop(); }
+
+    } else {
         console.log ('error');
-      }
-    $scope.counterSec = getUItime(seconds);
+    }
 
   };
+
 
   $scope.modeWorkBreak = function (x) {
     if (x === 'Work') {
       $scope.mode = 'Work';
-      $scope.setTimeTo(1500)
-      $scope.counterSec = getUItime(seconds);
+      $scope.resetTimer()
+
+      //style changes to show the selected option
       $scope.wstyle = selectedStyle
       $scope.bstyle = notSelectedStyle
-      console.log ('Work mode on')
     } else if (x === 'Break') {
       $scope.mode = 'Break';
-      $scope.setTimeTo(300);
-      $scope.counterSec = getUItime(seconds);
+      $scope.resetTimer();
+
+      //style changes to show the selected option
       $scope.wstyle = notSelectedStyle
       $scope.bstyle = selectedStyle
-      console.log ('Break mode on')
     } else {
       console.log ('error in mode select')
       console.log (x)
@@ -119,24 +139,24 @@ app.controller('TimeCtrl', function($scope, $timeout){
   //   }
   // };
 
+
   $scope.musicstyle = function (musicSource) {
     if (musicSource === 'Spotify') {
       $scope.spotStyle = selectedStyle
       $scope.youStyle = notSelectedStyle
-      console.log ('We on spotify')
     } else if (musicSource === 'Youtube') {
       $scope.spotStyle = notSelectedStyle
       $scope.youStyle = selectedStyle
-      console.log ('We on youtube')
     } else {
       console.log ('error in the music source')
       console.log (musicSource)
     }
   };
 
+
   var alertMe = function() {
-   var audio = new Audio('audio/buzzer.mp3');
-   audio.play();
+    var audio = new Audio('audio/buzzer.mp3');
+    audio.play();
   };
 
 });

@@ -8,7 +8,7 @@
   <div class="suggested-time">
 
     <div class="time-for-work" ng-show="(mode === 'Break')">
-      <button class="suggestions" ng-repeat="min in breakMin" ng-click="setTimeTo(min*60)">{{min}}</button>
+      <button class="suggestions" ng-repeat="min in breakMin" ng-click="setTimeTo(min*60)"> {{min}}</button>
       <span class="suggestions" ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
         <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="time-for-break" ng-show="(mode === 'Work')">
-      <button class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo(min*60)">{{min}}</button>
+      <button class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo(min*60)"> {{min}}</button>
       <span class="suggestions" ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
         <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
@@ -66,9 +66,6 @@
   <button class="music-source-button" ui-sref="home.youtube" ng-click="musicstyle('Youtube');" style={{youStyle}}>
     Youtube
   </button>
-  <!-- <button class="music-source-button" ui-sref="home.radio">
-    Radio
-  </button> -->
 </div>
 
 <div class="row flavorRow">
@@ -112,5 +109,3 @@
  
       
     </div>
-  </div>
-</div>

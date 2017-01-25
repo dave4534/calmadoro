@@ -54,10 +54,6 @@
   background-color: #f3967c;
 }
 
-.button:active {
-  border: 3px solid #f37854;
-}
-
 .modeContainer {
   margin: 0 auto;
   text-align: center;
