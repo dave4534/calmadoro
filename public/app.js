@@ -6,17 +6,17 @@ $stateProvider
     .state('home', {
     url: '/home',
     controller: 'TimeCtrl',
-    templateUrl: './Templates/partial-home.html'
+    templateUrl: './Templates/home.html'
     })
     .state('home.spotify', {
     url: '/spotify',
     controller: 'TimeCtrl',
-    templateUrl:'./Templates/partial-music-spotify.html'
+    templateUrl:'./Templates/spotify.html'
     })
     .state('home.youtube', {
     url: '/youtube',
     controller: 'TimeCtrl',
-    templateUrl:'./Templates/partial-music-youtube.html'
+    templateUrl:'./Templates/youtube.html'
     });
     // .state('home.radio', {
     // url: '/radio',
