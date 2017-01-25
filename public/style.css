@@ -202,69 +202,45 @@
   text-align: center;
 }
 
-/*.iframe {
+.flavorRow {
+  margin: 30px 0;
+}
+
+.flavorContainer {
+  background-color: white;
+  height: 160px;
+  width: 160px;
   margin: 0 auto;
-}*/
+  border-radius: 5px;
+  box-shadow: 0 0 1.3rem rgba(0,0,0,0.25);
+}
 
-/*.musicPlayerButtonContainer {
+.flavorContainer:hover {
+  
+}
+
+.iconContainer {
+  width: 100%;
+  height: 80px;
+/*  background-color: yellow;*/
+}
+
+.flavorTitle {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
   text-align: center;
-  margin-top: 20px;
-}*/
+  font-size: 1em;
+  letter-spacing: .06em;
+    margin-top: 22px;
+}
 
-/*.musicPlayerButton {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-}*/
+.chillhopIcon {
+    width: 87px;
+    margin: 0 auto;
+    padding: 29px 0 0 0;
+}
 
-/*.backButton {
-  transform: rotate(180deg);
-  height: 30px;
-  width: 30px;
-}*/
-
-/*.musicPlayerButton:hover {
-  color: green;
-}*/
-
-/*.nextButton {
-  height: 30px;
-  width: 30px;
-}*/
-
-/*.playerTimeline {
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 20px;
-}*/
-
-/*.nowPlaying {
-  text-align: center;
-  font-family: 'Montserrat Light';
-  color: white;
-  letter-spacing: .1em;
-  margin-top: 12px;
-}*/
-
-/*.poweredByContainer {
-  text-align: center;
-  margin-top: 30px;
-}*/
-
-/*.poweredBy {
-  display: inline-block;
-  font-family: 'Montserrat Light';
-  letter-spacing: .04em;
-  font-size: .9em;
-}*/
-
-/*.spotifyLogo {
-  display: inline-block;
-  height: 25px;
-  margin-left: 5px;
-}*/
+.classicalIcon {
+  display: block;
+  height: 80px;
+}
