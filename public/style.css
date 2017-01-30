@@ -7,9 +7,11 @@
 }
 
 .bgImage {
-  background: url(https://images.unsplash.com/photo-1469353680598-5dc830efef5c?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
-/*  width: 100%;
+/*  background: url(https://images.unsplash.com/photo-1469353680598-5dc830efef5c?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
+*//*  width: 100%;
   height: 900px;*/
+    background: url(images/bg.jpeg);
+
    background-position: center center;
   background-repeat:  no-repeat;
   background-attachment: fixed;
@@ -22,7 +24,7 @@
   width: 350px;
   display: block;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .timer {
@@ -104,9 +106,11 @@
     padding-top: 11px;
 }
 
-/*.modebtn:hover {
-  border: 2px solid grey;
-}*/
+.modebtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25); 
+  color: white;
+}
 
 /*.modebtn:active {
   border: 3px solid grey;
@@ -219,13 +223,12 @@
 .flavorRow {
     margin: 0 auto;
     max-width: 810px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .iconContainer {
   width: 100%;
   height: 80px;
-/*  background-color: yellow;*/
 }
 
 .flavorTitle {
@@ -256,6 +259,7 @@
     box-shadow: 0 0 1.3rem rgba(0,0,0,0.25);
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
 
 .front {
@@ -271,16 +275,19 @@
     border-radius: 5px;
 }
 .back {
-  background-color: yellow;
   height: 100%;
   width: 100%;
+  border-radius: 6px;
+}
+
+iframe {
+  border-radius: 7px;
 }
 
 .flavorContainer:hover .front {
-    cursor: pointer;
+  cursor: pointer;
   transform: translateY(-160px);
 }
-
 
 
 
@@ -341,6 +348,10 @@ and (max-width : 990px) {
     height: 160px;
     width: 300px;
     margin-bottom: 20px;
+}
+
+.timer {
+  margin-bottom: 40px;
 }
 
 }
