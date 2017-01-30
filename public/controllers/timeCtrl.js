@@ -160,4 +160,8 @@ app.controller('TimeCtrl', function($scope, $timeout){
     audio.play();
   };
 
+  $scope.pickFlavor = function (x) {
+    console.log ('your pick: ' + x)
+  }
+
 });

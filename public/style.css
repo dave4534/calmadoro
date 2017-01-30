@@ -231,10 +231,6 @@
   box-shadow: 0 0 1.3rem rgba(0,0,0,0.25);
 }
 
-.flavorContainer:hover {
-  
-}
-
 .iconContainer {
   width: 100%;
   height: 80px;
@@ -260,6 +256,7 @@
   display: block;
   height: 80px;
 }
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
@@ -337,4 +334,29 @@ and (min-width : 1824px) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
+  
+}
+
+
+/*=========================================================*/
+
+.flavor {
+  overflow: hidden;
+}
+
+.flavor:hover .front {
+  transform: translateY(-160px);
+}
+
+.flavor .front {
+    display: inline-block;
+    transition: transform 2s;
+    position: absolute;
+}
+
+.flavor .back {
+  display: inline-block;
+  position: relative;
+  left: 160px;
+
 }
