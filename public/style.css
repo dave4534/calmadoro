@@ -262,7 +262,7 @@
 
 .flavor .front {
     display: inline-block;
-    transition: transform 2s;
+    transition: transform 1.5s;
     position: absolute;
 }
 
