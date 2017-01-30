@@ -1,4 +1,24 @@
 <div class="row">
+  <div class="modeContainer">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="modebtn" id="work" ng-click="modeWorkBreak('Work');" style={{wstyle}}>
+        WORK MODE
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="modebtn" id="rest" ng-click="modeWorkBreak('Break');" style={{bstyle}}>
+        BREAK MODE
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" >
+  <img src="images/logo.png" class="logo" >
+</div>
+
+<div class="row">
   <div class="timer">
     {{counterSec}}
   </div>
@@ -35,7 +55,7 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="modeContainer">
 
     <button class="modebtn" id="work" ng-click="modeWorkBreak('Work');" style={{wstyle}}>
@@ -46,7 +66,7 @@
       BREAK
     </button>
   </div>
-</div>
+</div> -->
 
 
 <!-- **********BINDING BUTTON v0.0.1********** -->
@@ -58,81 +78,85 @@
     {{onoff}}
   </button>
 </div> -->
+<!-- 
+  <div ui-view></div> -->
 
-<div ui-view></div>
-
-<div class="music-source-container">
+<!-- <div class="music-source-container">
   <button class="music-source-button" ui-sref="home.spotify" ng-click="musicstyle('Spotify');" style={{spotStyle}}>
     Spotify
   </button>
   <button class="music-source-button" ui-sref="home.youtube" ng-click="musicstyle('Youtube');" style={{youStyle}}>
     Youtube
   </button>
-</div>
+</div> -->
 
 <div class="row flavorRow">
 
-  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 flavor">
-    <div class='flavorContainer back'>
-      <div class="iframe iconContainer">
-        <iframe width="160" height="160" src="https://www.youtube.com/embed/UfFqiNLpK-Y" frameborder="0" allowfullscreen></iframe>
+
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="flavorContainer">
+      <!-- Front (Flavor Icon + Title) -->
+      <div class="front">
+        <div class="iconContainer">
+          <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+        </div>
+        <div class="flavorTitle">Chillhop</div>
       </div>
-    </div>
-    <div class="flavorContainer front">
-      <div class="iconContainer">
-        <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+      
+      <div class="back">
+         <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/BgjmhbkPVAI" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="flavorTitle">Chillhop</div>
     </div>
   </div>
 
-
-  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 flavor">
-    <div class='flavorContainer back'>
-      <div class="iframe iconContainer">
-        <!-- 8 HOURS Classical Music for Sleeping: Relaxing Piano Music Mozart, Debussy, Chopin, Schubert, Grieg -->
-        <iframe width="160" height="160" src="https://www.youtube.com/embed/Fnzn-3oXEUI" frameborder="0" allowfullscreen></iframe>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="flavorContainer">
+      <!-- Front (Flavor Icon + Title) -->
+      <div class="front">
+        <div class="iconContainer">
+          <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+        </div>
+        <div class="flavorTitle">Zen</div>
       </div>
-    </div>
-    <div class="flavorContainer front">
-      <div class="iconContainer">
-        <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+      
+      <div class="back">
+         <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/BgjmhbkPVAI" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="flavorTitle">Classical</div>
     </div>
   </div>
 
-
-  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 flavor">
-    <div class='flavorContainer back'>
-      <div class="iframe iconContainer">
-        <!-- Relax 8 Hours of Birds Singing and Water Sounds-Nature Sound Relaxation-Relaxing Birdsong -->
-        <iframe width="160" height="160" src="https://www.youtube.com/embed/PwSHOI7DwWM" frameborder="0" allowfullscreen></iframe>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="flavorContainer">
+      <!-- Front (Flavor Icon + Title) -->
+      <div class="front">
+        <div class="iconContainer">
+          <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+        </div>
+        <div class="flavorTitle">Classical</div>
       </div>
-    </div>
-    <div class="flavorContainer front">
-      <div class="iconContainer">
-        <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+      
+      <div class="back">
+         <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/BgjmhbkPVAI" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="flavorTitle">Nature</div>
     </div>
   </div>
 
-
-  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 flavor">
-    <div class='flavorContainer back'>
-      <div class="iframe  iconContainer">
-        <!-- 3 HOURS of Relaxing Music | Zen Garden | Sleep Music for Spa, Meditation, Therapy -->
-        <iframe width="160" height="160" src="https://www.youtube.com/embed/BgjmhbkPVAI" frameborder="0" allowfullscreen></iframe>
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="flavorContainer">
+      <!-- Front (Flavor Icon + Title) -->
+      <div class="front">
+        <div class="iconContainer">
+          <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+        </div>
+        <div class="flavorTitle">Nature</div>
       </div>
-    </div>
-    <div class="flavorContainer front">
-      <div class="iconContainer">
-        <div class="chillhopIcon"> <img src="images/chillhopIcon.svg"></div>
+      
+      <div class="back">
+         <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/BgjmhbkPVAI" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="flavorTitle">Zen</div>
     </div>
   </div>
+
 
 
 </div>
