@@ -1,12 +1,13 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-  var selectedStyle = 'border: 2px solid grey; font-weight: bold'
-  var notSelectedStyle = 'border: 0.5px solid grey; font-weight: normal'
+  // var selectedStyle = 'border: 2px solid white; font-weight: bold'
+  var selectedStyle = 'background-color: rgba(255, 255, 255, 0.25); color: white; font-weight: bold';
+  var notSelectedStyle = 'font-weight: normal';
   $scope.togglingButton = 'START';
-  $scope.mode = 'Break';
-  var seconds = 300;
-  $scope.wstyle = notSelectedStyle;
-  $scope.bstyle = selectedStyle;
+  $scope.mode = 'Work';
+  var seconds = 1500;
+  $scope.wstyle = selectedStyle;
+  $scope.bstyle = notSelectedStyle;
   $scope.spotStyle = notSelectedStyle;
   $scope.youStyle = selectedStyle;
   var isTimerRunning = false;
@@ -158,9 +159,5 @@ app.controller('TimeCtrl', function($scope, $timeout){
     var audio = new Audio('audio/buzzer.mp3');
     audio.play();
   };
-
-  $scope.pickFlavor = function (x) {
-    console.log ('your pick: ' + x)
-  }
 
 });
