@@ -33,6 +33,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
         }
     } else {
       $scope.customMin = !$scope.customMin
+      $scope.startStop();
     }
   };
 
