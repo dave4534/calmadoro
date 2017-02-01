@@ -27,12 +27,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
       }
       seconds = setSeconds;
       $scope.counterSec = getUItime(seconds);
-        if (isTimerRunning) {
           $scope.startStop();
-        }
     } else {
       $scope.customMin = !$scope.customMin
-      $scope.startStop();
     }
   };
 
