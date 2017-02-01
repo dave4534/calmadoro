@@ -22,15 +22,15 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.setTimeTo = function (setSeconds) {
     if (setSeconds) {
       if ($scope.mode === 'Work') {
-        $scope.workCustom = setSeconds
+        $scope.workCustom = setSeconds;
       } else {
-        $scope.breakCustom = setSeconds
+        $scope.breakCustom = setSeconds;
       }
       seconds = setSeconds;
       $scope.counterSec = getUItime(seconds);
           $scope.startStop();
     } else {
-      $scope.customMin = !$scope.customMin
+      $scope.customMin = !$scope.customMin;
     }
   };
 
@@ -86,14 +86,14 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
     if ($scope.mode === 'Work') {
         if ($scope.workCustom) { $scope.setTimeTo($scope.workCustom); }
-        else { $scope.setTimeTo(1500)}
+        else { $scope.setTimeTo(1500);}
 
         //stop the timer if it is running
         if (isTimerRunning) { $scope.startStop(); }
 
     } else if ($scope.mode === 'Break') {
         if ($scope.breakCustom) { $scope.setTimeTo($scope.breakCustom); }
-        else {$scope.setTimeTo(300)}
+        else {$scope.setTimeTo(300);}
 
         //stop the timer if it is running
         if (isTimerRunning) { $scope.startStop(); }
@@ -108,21 +108,21 @@ app.controller('TimeCtrl', function($scope, $timeout){
   $scope.modeWorkBreak = function (x) {
     if (x === 'Work') {
       $scope.mode = 'Work';
-      $scope.resetTimer()
+      $scope.resetTimer();
 
       //style changes to show the selected option
-      $scope.wstyle = selectedStyle
-      $scope.bstyle = notSelectedStyle
+      $scope.wstyle = selectedStyle;
+      $scope.bstyle = notSelectedStyle;
     } else if (x === 'Break') {
       $scope.mode = 'Break';
       $scope.resetTimer();
 
       //style changes to show the selected option
-      $scope.wstyle = notSelectedStyle
-      $scope.bstyle = selectedStyle
+      $scope.wstyle = notSelectedStyle;
+      $scope.bstyle = selectedStyle;
     } else {
-      console.log ('error in mode select')
-      console.log (x)
+      console.log ('error in mode select');
+      console.log (x);
     }
   };
 
@@ -141,14 +141,14 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
   $scope.musicstyle = function (musicSource) {
     if (musicSource === 'Spotify') {
-      $scope.spotStyle = selectedStyle
-      $scope.youStyle = notSelectedStyle
+      $scope.spotStyle = selectedStyle;
+      $scope.youStyle = notSelectedStyle;
     } else if (musicSource === 'Youtube') {
-      $scope.spotStyle = notSelectedStyle
-      $scope.youStyle = selectedStyle
+      $scope.spotStyle = notSelectedStyle;
+      $scope.youStyle = selectedStyle;
     } else {
-      console.log ('error in the music source')
-      console.log (musicSource)
+      console.log ('error in the music source');
+      console.log (musicSource);
     }
   };
 
