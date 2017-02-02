@@ -2,10 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Glegoo');
 @import url('https://allfont.net/allfont.css?fonts=montserrat-light');
 
-/*Delete this comment*/
-
 * {
   text-decoration: none;
+}
+
+body {
+/*  width: 100%;
+  height: 100%;*/
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 .bgImage {
@@ -43,7 +54,7 @@
   margin-bottom: 20px;
 }
 
-.button {
+.timerButton {
   color: white;
   width: 14%;
   height: 45px;
@@ -59,9 +70,9 @@
   margin-right: 5px;
 }
 
-.button:hover {
+/*.button:hover {
   background-color: #f3967c;
-}
+}*/
 
 .modeContainer {
   margin: 0 auto;
@@ -104,7 +115,6 @@
     letter-spacing: .08em;
     border-radius: 3px;
     outline: none;
-    /*margin-top: 10px;*/
     padding-top: 11px;
     display: inline-block;
     vertical-align: middle;
@@ -373,13 +383,82 @@ iframe {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
+.modebtn {
+  font-size: 2.3em;
+  padding-bottom: 60px;
+  padding-top: 19px;
+}
+
+.logo {
+  width: 580px;
+}
+
+/*Not sure this is the best way to execute full screen on mobile*/
+.bgImage {
+  min-height: 1600px;
+}
+
+.timer {
+  font-size: 14em;
+}
+
+.suggestions {
+  padding: 14px 28px;
+  font-size: 2em;
+}
+
+.goButton {
+  height: 70px;
+  width: 140px;
+  border-radius: 11px;
+  font-size: .8em;
+}
+
+.timerButton {
+  width: 34%;
+  height: 84px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  font-size: 2.6em;  
+}
+
+.buttonContainer {
+    margin-bottom: 53px;
+}
+
+.flavorContainer {
+    width: 100% !important;
+    height: 331px !important;
+    box-shadow: 0 0 0rem rgba(0,0,0,0);
+    margin-bottom: 50px !important;
+}
+
+.flavorTitle {
+  font-size: 3em;
+  margin-top: 153px;
+}
+
+.chillhopIcon {
+  width: 214px;
+  padding: 49px 0 0 0;
+}
+
+.flavorContainer:hover .front {
+  cursor: pointer;
+  transform: translateY(-331px);
+}
+
+.suggested-time {
+    margin: -20px 0 30px 0;
+}
 
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen
 and (min-width : 321px) {
-/* Styles */
+
 }
 
 /* Smartphones (portrait) ----------- */
@@ -419,7 +498,8 @@ and (min-width : 1224px) {
 
 /* Desktops and laptops ----------- */
 @media only screen
-and (max-width : 990px) {
+and (max-width : 990px)
+and (min-width : 490px) {
 
 .flavorContainer {
     height: 160px;

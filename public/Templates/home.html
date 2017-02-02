@@ -33,7 +33,9 @@
 
       <span class="suggestions " ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
-        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)" data-ng-model="clearMin">Go</button>
+
+        <button class="btn btn-primary goButton" ng-click="setTimeTo(usersMinutes*60)" data-ng-model="clearMin">Go</button>
+
       </span>
     </div>
 
@@ -41,7 +43,9 @@
       <div class="suggestions" ng-repeat="min in workMin" ng-class="{'last': $last}"ng-click="setTimeTo(min*60)"> {{min}}</div>
       <span class="suggestions" ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
-        <button class="btn btn-primary btn-fnt" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+
+        <button class="btn btn-primary btn-fnt goButton" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+
       </span>
     </div>
 
@@ -50,8 +54,8 @@
 
 <div class="row">
   <div class="buttonContainer">
-    <button class="button btn-shadow" ng-click="startStop()">{{togglingButton}}</button>
-    <button class="button btn-shadow" ng-click="resetTimer()">Reset</button>
+    <button class="timerButton btn-shadow" ng-click="startStop()">{{togglingButton}}</button>
+    <button class="timerButton btn-shadow" ng-click="resetTimer()">Reset</button>
   </div>
 </div>
 

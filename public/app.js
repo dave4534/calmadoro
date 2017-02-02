@@ -19,6 +19,6 @@ $stateProvider
   templateUrl:'./Templates/youtube.html'
   });
 
-  $urlRouterProvider.otherwise('/home/youtube');
+  $urlRouterProvider.otherwise('/home');
 
 }]);
