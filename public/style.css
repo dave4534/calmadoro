@@ -242,6 +242,136 @@ body {
     transform: translateY(-5px);
 }
 
+/*3d cube  styling  ==========================*/
+.marginCube {
+    margin: 70px 0;
+}
+
+.flavorCube {
+
+}
+/*.container-face{
+  display: flex;
+  justify-content: center;
+}*/
+
+.flavorCube h4 {
+    text-align: center;
+}
+
+/*ul li {
+    list-style: none;
+    display: inline-block;
+}
+*/
+.view_3d {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.cube_3d {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.pane {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #fff;
+  /*opacity: 0.8;*/
+
+}
+
+/* 3D Cube Creation */
+
+.frontCube {
+  background: hsla(0, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/1);
+  /*z-index: 2;*/
+  transform: translate3d(0,0,125px);
+}
+
+.backCube {
+ background: hsla( 240, 100%, 50%, 0.7 );
+ background: url(http://lorempixel.com/300/300/nature/6);
+ transform: rotateY(180deg) translate3d(0,0,125px);
+}
+
+.leftCube {
+  background: hsla( 120, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/2);
+  transform: rotateY(-90deg) translate3d(0,0,125px);
+}
+
+.rightCube {
+  background: hsla(60, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/3);
+  transform: rotateY(90deg) translate3d(0,0,125px);
+}
+
+.topCube {
+  background: hsla( 300, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/4);
+  transform: rotateX(90deg) translate3d(0,0,125px);
+}
+
+.bottomCube {
+  background: hsla( 180, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/5);
+  transform: rotateX(-90deg) translate3d(0,0,125px);
+}
+
+
+/* 3D Cube Transformation */
+
+#frontCube:checked ~ .view_3d ~.cube_3d  {
+  transform: rotateY(0deg);
+}
+
+#leftCube:checked ~ .view_3d .cube_3d  {
+ transform: rotateY(90deg);
+}
+
+#rightCube:checked ~ .view_3d .cube_3d  {
+  transform: rotateY(-90deg);
+}
+
+#bottom:checked ~ .view_3d .cube_3d {
+  transform: rotateX(90deg);
+}
+
+#topCube:checked ~ .view_3d .cube_3d  {
+  transform: rotateX(-90deg);
+}
+
+#backCube:checked ~ .view_3d .cube_3d  {
+  transform: rotateY(180deg);
+}
+
+/* Backface-visibility */
+
+#hidden:checked ~ .view_3d .cube_3d .pane {
+  backface-visibility: hidden;
+}
+
+#visible:checked ~ .view_3d .cube_3d .pane {
+  backface-visibility: visible;
+}
+
+
+
+
+/*3d cube ==========================*/
+
 
 
 /*media queries*/
