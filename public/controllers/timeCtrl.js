@@ -1,7 +1,6 @@
 app.controller('TimeCtrl', function($scope, $timeout){
 
-  // var selectedStyle = 'border: 2px solid white; font-weight: bold'
-  var selectedStyle = 'background-color: rgba(255, 255, 255, 0.25); color: white; font-weight: bold';
+  var selectedStyle = 'background-color: rgba(255, 255, 255, 0.25); color: white;';
   var notSelectedStyle = 'font-weight: normal';
   $scope.togglingButton = 'START';
   $scope.mode = 'Work';
