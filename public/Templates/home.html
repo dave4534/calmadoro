@@ -29,19 +29,19 @@
 
     <div class="time-for-work" ng-show="(mode === 'Break')">
 
-      <div class="suggestions" ng-repeat="min in breakMin" ng-click="setTimeTo(min*60)"> {{min}}</div>
+      <div class="suggestions push" ng-repeat="min in breakMin" ng-click="setTimeTo(min*60)"> {{min}}</div>
 
-      <span class="suggestions" ng-show=customMin>
+      <span class="suggestions " ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
-        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)" data-ng-model="clearMin">Go</button>
       </span>
     </div>
 
     <div class="time-for-break" ng-show="(mode === 'Work')">
-      <div class="suggestions" ng-repeat="min in workMin" ng-click="setTimeTo(min*60)"> {{min}}</div>
+      <div class="suggestions" ng-repeat="min in workMin" ng-class="{'last': $last}"ng-click="setTimeTo(min*60)"> {{min}}</div>
       <span class="suggestions" ng-show=customMin>
         <input class="customMins" type="number" placeholder="Time in mins" ng-model="usersMinutes">
-        <button class="btn btn-primary" ng-click="setTimeTo(usersMinutes*60)">Go</button>
+        <button class="btn btn-primary btn-fnt" ng-click="setTimeTo(usersMinutes*60)">Go</button>
       </span>
     </div>
 
@@ -95,6 +95,8 @@
 
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <div class="flavorContainer">
+
+
       <!-- Front (Flavor Icon + Title) -->
       <div class="front">
         <div class="iconContainer">
@@ -156,7 +158,5 @@
       </div>
     </div>
   </div>
-
-
 
 </div>
