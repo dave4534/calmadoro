@@ -19,9 +19,11 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
 
   $scope.setTimeTo = function (setSeconds) {
+
     if (setSeconds) {
       if ($scope.mode === 'Work') {
         $scope.workCustom = setSeconds;
+        setSeconds.$setPristine();
       } else {
         $scope.breakCustom = setSeconds;
       }
@@ -31,6 +33,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
     } else {
       $scope.customMin = !$scope.customMin;
     }
+
   };
 
 

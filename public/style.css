@@ -272,15 +272,22 @@ body {
 .suggestions {
     margin: 3px;
     display: inline-block;
-    font-family: 'Montserrat-light';
+    font-family: 'Glegoo', serif;
     text-transform: uppercase;
     border: 1px solid gray;
     border-radius: 3px;
     padding: 4px 22px;
     font-size: 1em;
     letter-spacing: .07em;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
 }
 
+/*.suggestions.last {
+  font-family: 'Montserrat';
+}
+*/
 .suggestions:hover {
   cursor: pointer;
 }
@@ -288,6 +295,16 @@ body {
 .suggested-time {
   margin: -40px 0 23px 0;
   text-align: center;
+}
+
+
+.customMins {
+  font-family: 'Glegoo', serif;
+  text-indent: 10px;
+}
+
+.btn-fnt {
+  font-family: 'Montserrat';
 }
 
 .flavorRow {
