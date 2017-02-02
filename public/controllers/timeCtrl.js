@@ -23,7 +23,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
     if (setSeconds) {
       if ($scope.mode === 'Work') {
         $scope.workCustom = setSeconds;
-        setSeconds.$setPristine();
+        // setSeconds.$setPristine();
       } else {
         $scope.breakCustom = setSeconds;
       }

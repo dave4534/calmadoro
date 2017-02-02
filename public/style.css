@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Glegoo');
-@import url('https://allfont.net/allfont.css?fonts=montserrat-light');
+@import url('http://allfont.net/allfont.css?fonts=montserrat-light');
 
 * {
   text-decoration: none;
@@ -420,7 +420,7 @@ and (max-device-width : 480px) {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 15px;
-  font-size: 2.6em;  
+  font-size: 2.6em;
 }
 
 .buttonContainer {
