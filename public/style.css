@@ -29,7 +29,7 @@ body {
   background-repeat:  no-repeat;
   background-attachment: fixed;
   background-size:  cover;
-    min-height: 1000px;
+    min-height: 1500px;
 }
 
 .logo {
@@ -248,28 +248,31 @@ body {
 }
 
 .flavorCube {
-
+    max-width: 60%;
+    min-height: 80%;
+    margin: 0 auto;
+    border: 1px solid red;
+    position: relative;
 }
-/*.container-face{
-  display: flex;
-  justify-content: center;
-}*/
+
 
 .flavorCube h4 {
     text-align: center;
 }
 
-/*ul li {
-    list-style: none;
-    display: inline-block;
+.flavorCube input {
+    text-align: center;
 }
-*/
+
 .view_3d {
   width: 250px;
   height: 250px;
   display: inline-block;
   text-align: center;
   perspective: 1000px;
+  position: absolute;
+  top: 150px;
+  left: 30%;
 }
 
 .cube_3d {
@@ -294,39 +297,39 @@ body {
 /* 3D Cube Creation */
 
 .frontCube {
-  background: hsla(0, 100%, 50%, 0.7 );
-  background: url(http://lorempixel.com/300/300/nature/1);
-  /*z-index: 2;*/
+  /*background: hsla(0, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/1);*/
+  z-index: 2;
   transform: translate3d(0,0,125px);
 }
 
 .backCube {
- background: hsla( 240, 100%, 50%, 0.7 );
- background: url(http://lorempixel.com/300/300/nature/6);
+/* background: hsla( 240, 100%, 50%, 0.7 );
+ background: url(http://lorempixel.com/300/300/nature/6);*/
  transform: rotateY(180deg) translate3d(0,0,125px);
 }
 
 .leftCube {
-  background: hsla( 120, 100%, 50%, 0.7 );
-  background: url(http://lorempixel.com/300/300/nature/2);
+  /*background: hsla( 120, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/2);*/
   transform: rotateY(-90deg) translate3d(0,0,125px);
 }
 
 .rightCube {
-  background: hsla(60, 100%, 50%, 0.7 );
-  background: url(http://lorempixel.com/300/300/nature/3);
+ /* background: hsla(60, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/3);*/
   transform: rotateY(90deg) translate3d(0,0,125px);
 }
 
 .topCube {
-  background: hsla( 300, 100%, 50%, 0.7 );
-  background: url(http://lorempixel.com/300/300/nature/4);
+  /*background: hsla( 300, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/4);*/
   transform: rotateX(90deg) translate3d(0,0,125px);
 }
 
 .bottomCube {
-  background: hsla( 180, 100%, 50%, 0.7 );
-  background: url(http://lorempixel.com/300/300/nature/5);
+  /*background: hsla( 180, 100%, 50%, 0.7 );
+  background: url(http://lorempixel.com/300/300/nature/5);*/
   transform: rotateX(-90deg) translate3d(0,0,125px);
 }
 
