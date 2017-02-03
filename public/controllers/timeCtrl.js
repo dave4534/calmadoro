@@ -1,5 +1,11 @@
-app.controller('TimeCtrl', function($scope, $timeout){
+app.controller('TimeCtrl', ['$scope', '$timeout', '$sce', function($scope, $timeout, $sce){
 
+/*========= click video functuonality ==========*/
+  //init class isActive
+  $scope.selectedMusic = '';
+
+
+/*========= clock timer ==========*/
   var selectedStyle = 'background-color: rgba(255, 255, 255, 0.25); color: white;';
   var notSelectedStyle = 'font-weight: normal';
 
@@ -81,9 +87,9 @@ app.controller('TimeCtrl', function($scope, $timeout){
           $scope.startStop();
         } else {
           if ($scope.mode === 'Work') {
-            $scope.modeWorkBreak('Break')
+            $scope.modeWorkBreak('Break');
           } else {
-            $scope.modeWorkBreak('Work')
+            $scope.modeWorkBreak('Work');
           }
           $scope.customMin = false;
           alertMe();
@@ -100,14 +106,14 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
     if ($scope.mode === 'Work') {
       if ($scope.workCustom) { $scope.setTimeTo($scope.workCustom); }
-      else { $scope.setTimeTo(1500) }
+      else { $scope.setTimeTo(1500);}
 
       //stop the timer if it is running
       if (isTimerRunning) { $scope.startStop(); }
 
     } else if ($scope.mode === 'Break') {
       if ($scope.breakCustom) { $scope.setTimeTo($scope.breakCustom); }
-      else { $scope.setTimeTo(300) }
+      else { $scope.setTimeTo(300);}
 
       //stop the timer if it is running
       if (isTimerRunning) { $scope.startStop(); }
@@ -147,29 +153,62 @@ app.controller('TimeCtrl', function($scope, $timeout){
   };
 
   // **********NOT YET**********
-  // $scope.bindingBtn = function () {
-  //   if (bind === 'off') {
-  //     $scope.onoff = 'ON';
-  //     bind = 'on';
-  //   } else {
-  //     $scope.onoff  = 'OFF';
-  //     bind = 'off';
-  //   }
-  // };
+/*  $scope.bindingBtn = function () {
+    if (bind === 'off') {
+      $scope.onoff = 'ON';
+      bind = 'on';
+    } else {
+      $scope.onoff  = 'OFF';
+      bind = 'off';
+    }
+  };*/
 
 
-  // $scope.musicstyle = function (musicSource) {
-  //   if (musicSource === 'Spotify') {
-  //     $scope.spotStyle = selectedStyle;
-  //     $scope.youStyle = notSelectedStyle;
-  //   } else if (musicSource === 'Youtube') {
-  //     $scope.spotStyle = notSelectedStyle;
-  //     $scope.youStyle = selectedStyle;
-  //   } else {
-  //     console.log ('error in the music source');
-  //     console.log (musicSource);
-  //   }
-  // };
+/*  $scope.musicstyle = function (musicSource) {
+    if (musicSource === 'Spotify') {
+      $scope.spotStyle = selectedStyle;
+      $scope.youStyle = notSelectedStyle;
+    } else if (musicSource === 'Youtube') {
+      $scope.spotStyle = notSelectedStyle;
+      $scope.youStyle = selectedStyle;
+    } else {
+      console.log ('error in the music source');
+      console.log (musicSource);
+    }
+  };*/
+
+//on click show video under flavor selected
+
+$scope.addEffect = function(event, styleMusic, urlVideo) {
+
+// set selected music for open effec, and close all others
+  $scope.selectedMusic = styleMusic;
+
+// set youtube video url dynamically
+  $scope.url = $sce.trustAsResourceUrl(urlVideo);
+
+  };
+
+  //invoke function to get the selected music url
+  $scope.getUrl = function(boxName){
+
+    console.log(boxName, 'selectedMusic =',$scope.selectedMusic, 'resultUrl=', boxName === $scope.selectedMusic ? $scope.url : '');
+
+    return boxName === $scope.selectedMusic ? $scope.url : 'null';
+  };
 
 
-});
+}]);
+
+
+
+
+
+
+
+
+
+
+
+
+
