@@ -142,7 +142,7 @@ app.controller('TimeCtrl', function($scope, $timeout){
 
 
   var alertMe = function() {
-    var audio = new Audio('audio/buzzer.mp3');
+    var audio = new Audio('audio/buzzer.wav');
     audio.play();
   };
 
