@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+*:hover {
+  text-decoration: none;
+}
+
 body {
 /*  width: 100%;
   height: 100%;*/
@@ -17,6 +21,30 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   height: 100%;
+}
+
+.calmadoroNav {
+    position: relative;
+    bottom: -250px;
+    left: 0px;
+}
+
+.navAbout {
+color: white;
+    text-transform: uppercase;
+    font-family: montserrat-light;
+    letter-spacing: .1em;
+    text-align: center;
+        margin-left: 70px;
+    margin-bottom: 10px;
+}
+
+.navAbout>a {
+  color: white;
+}
+
+.navAbout>a:hover {
+  text-decoration: none;
 }
 
 .bgImage {
@@ -46,6 +74,7 @@ body {
   font-size: 8em;
   text-align: center;
   margin-bottom: 30px;
+  text-shadow: 0 0 1.3rem rgba(0,0,0,0.10);
 }
 
 .buttonContainer {
@@ -429,6 +458,106 @@ iframe {
   transform: translateY(-160px);
 }
 
+.aboutHeader {
+      color: #ffffff;
+    font-size: 3.9em;
+    text-align: center;
+    display: inherit;
+  font-family: 'Montserrat-light';
+    line-height: 1.2em;
+    padding-top: 50px;
+        margin: 0 0 20px;
+}
+
+.aboutSubheader {
+    font-size: 1.25em;
+    text-align: center;
+    display: inherit;
+    font-family: 'Montserrat-light';
+    font-weight: 100;
+    line-height: 1.4em;
+    letter-spacing: .04em;
+    padding: 2px 35px;
+    margin: 0 76px;
+}
+
+.iconRow  {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profileContainer {
+  display: inline-block;
+  margin: 35px 0 0 0;
+}
+
+.splashIconHeader {
+    color: #444444;
+  font-family: 'Montserrat';
+    font-size: 1.3em;
+    margin: 1em 2em 0 2em;
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+.marthaImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    background-image: url(../images/martha.png);
+    margin: 0 auto;
+}
+
+.daveImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    background-image: url(../images/dave.png);
+    margin: 0 auto;
+}
+
+.benImage{
+    width: 180px;
+    height: 180px;
+    border-radius: 500px;
+    background-image: url(../images/ben.png);
+    margin: 0 auto;
+}
+
+.profileDesc {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Montserrat';
+    margin: 4px 7%;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+}
+
+.profileIconRow {
+  margin: 0 auto;
+  text-align: center;
+/*  border: 1px solid green;*/
+  max-width: 200px;
+}
+
+.linkedinIcon {
+    font-size: 1.6em;
+    margin: 10px;
+}
+
+.githubIcon {
+  font-size: 1.6em;
+  margin: 10px;
+}
+
+.linkedInIcon:hover {
+  text-decoration: none;
+}
+
+
+
+/*Media Queries Begin Here*/
 
 /*media queries*/
 
