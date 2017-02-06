@@ -3,7 +3,8 @@ app.directive('musicStyle', ['$sce', function($sce) {
 		restrict: 'E',
 		templateUrl: 'directives/musicStyle.html',
 		controller: function($scope){
-
+			//initialize the selected music
+			$scope.selectedMusic = false;
 			//on click show video under flavor selected
 			$scope.addEffect = function(event, styleMusic, urlVideo) {
 
@@ -20,8 +21,18 @@ app.directive('musicStyle', ['$sce', function($sce) {
 
 			    console.log(boxName, 'selectedMusic =',$scope.selectedMusic, 'resultUrl=', boxName === $scope.selectedMusic ? $scope.url : '');
 
-			    return boxName === $scope.selectedMusic ? $scope.url : 'null';
+			    return boxName === $scope.selectedMusic ? $scope.url : ' ';
 			};
+
+			//add remove icon and stop music when click the remove icon
+			$scope.removing = false;
+			$scope.stopMusic = function() {
+				$scope.removing = true;
+				$scope.selectedMusic = true;
+				$scope.removing = false;
+			};
+
+
 		}
 	};
 
