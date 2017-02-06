@@ -7,7 +7,7 @@ $stateProvider
   url: '/home',
   controller: 'TimeCtrl',
   templateUrl: './Templates/home.html'
-  })
+  });
   // .state('home.spotify', {
   // url: '/spotify',
   // controller: 'TimeCtrl',
