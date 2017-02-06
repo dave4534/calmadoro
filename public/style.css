@@ -271,31 +271,77 @@ color: white;
     transform: translateY(-5px);
 }
 
+.frontFlavor {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: transform .85s ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-
-/*media queries*/
-@media (max-width: 700px) {
-  .button {
-    width: 20%;
+.frontFlavor:after{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
     font-size: 1em;
-  }
-/*  .modebtn {
-    width: 17%;
-    font-size: .9em;
-  }*/
-  .timer {
-    font-size: 6em;
-    margin-bottom: 10px;
-  }
-  .logo {
-    width: 250px;
-  }
-  .playerHeader {
-    font-size: 1.2em;
-  }
-  .music-source-button {
-    width: 22%;
-  }
+    letter-spacing: .08em;
+    margin-top: 22px;
+    line-height: 254px;
+    margin-left: 43px;
+}
+
+.coverChillhop {
+    background: url(images/chillhopIcon.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverChillhop:after{
+    content: 'chillhop';
+}
+
+.coverZen {
+    background: url(images/zen.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverZen:after{
+  content: 'zen';
+  margin-left: 63px;
+}
+
+.coverClassic {
+    background: url(images/classical.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverClassic:after{
+  content: 'classic';
+  margin-left: 46px;
+}
+
+.coverNature {
+    background: url(images/nature.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverNature:after{
+  content: 'nature';
+  margin-left: 47px;
+}
+
+.effect {
+  transition: transform .85s ease-out;
+  transform: translateY(-160px);
 }
 
 .suggestions {
@@ -374,12 +420,17 @@ color: white;
     width: 160px;
     margin: 0 auto;
     border-radius: 5px;
-    box-shadow: 0 0 1.3rem rgba(0,0,0,0.25);
+    box-shadow: 0 0 0.7rem rgba(0,0,0,0.25);
     overflow: hidden;
     position: relative;
     border-radius: 5px;
 }
 
+span.glyphicon.glyphicon-remove {
+    color: grey;
+   float: right;
+    cursor: pointer;
+}
 .front {
     background-color: white;
     height: 100%;
@@ -508,81 +559,163 @@ iframe {
 
 /*Media Queries Begin Here*/
 
+/*media queries*/
+
+@media (max-width: 700px) {
+  .button {
+    width: 20%;
+    font-size: 1em;
+  }
+/*  .modebtn {
+    width: 17%;
+    font-size: .9em;
+  }*/
+  .timer {
+    font-size: 6em;
+    margin-bottom: 10px;
+  }
+  .logo {
+    width: 250px;
+  }
+  .playerHeader {
+    font-size: 1.2em;
+  }
+  .music-source-button {
+    width: 22%;
+  }
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
-.modebtn {
-  font-size: 2.3em;
-  padding-bottom: 60px;
-  padding-top: 19px;
-}
+  .modebtn {
+    font-size: 2.3em;
+    padding-bottom: 60px;
+    padding-top: 19px;
+  }
 
-.logo {
-  width: 580px;
-}
+  .logo {
+    width: 580px;
+  }
 
-/*Not sure this is the best way to execute full screen on mobile*/
-.bgImage {
-  min-height: 1600px;
-}
+  /*Not sure this is the best way to execute full screen on mobile*/
+  .bgImage {
+    min-height: 1600px;
+  }
 
-.timer {
-  font-size: 14em;
-}
+  .timer {
+    font-size: 14em;
+  }
 
-.suggestions {
-  padding: 14px 28px;
-  font-size: 2em;
-}
+  .suggestions {
+    padding: 14px 28px;
+    font-size: 2em;
+  }
 
-.goButton {
-  height: 70px;
-  width: 140px;
-  border-radius: 11px;
-  font-size: .8em;
-}
+  .goButton {
+    height: 70px;
+    width: 140px;
+    border-radius: 11px;
+    font-size: .8em;
+  }
 
-.timerButton {
-  width: 34%;
-  height: 84px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 15px;
-  font-size: 2.6em;
-}
+  .timerButton {
+    width: 34%;
+    height: 84px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    font-size: 2.6em;
+  }
 
-.buttonContainer {
-    margin-bottom: 53px;
-}
+  .buttonContainer {
+      margin-bottom: 53px;
+  }
 
-.flavorContainer {
-    width: 100% !important;
-    height: 331px !important;
-    box-shadow: 0 0 0rem rgba(0,0,0,0);
-    margin-bottom: 50px !important;
-}
+  .flavorContainer {
+      width: 100% !important;
+      height: 331px !important;
+      box-shadow: 0 0 0rem rgba(0,0,0,0);
+      margin-bottom: 50px !important;
+  }
 
-.flavorTitle {
-  font-size: 3em;
-  margin-top: 153px;
-}
+  .flavorTitle {
+    font-size: 3em;
+    margin-top: 153px;
+  }
 
-.chillhopIcon {
-  width: 214px;
-  padding: 49px 0 0 0;
-}
+  .chillhopIcon {
+    width: 214px;
+    padding: 49px 0 0 0;
+  }
 
-.flavorContainer:hover .front {
-  cursor: pointer;
-  transform: translateY(-331px);
-}
+  .flavorContainer:hover .front {
+    cursor: pointer;
+    transform: translateY(-331px);
+  }
 
-.suggested-time {
-    margin: -20px 0 30px 0;
-}
+  .suggested-time {
+      margin: -20px 0 30px 0;
+  }
+
+  .effect {
+    transition: transform .85s ease-out;
+    transform: translateY(-344px);
+  }
+
+  span.glyphicon.glyphicon-remove {
+    font-size: 25px;
+  }
+
+  .coverChillhop {
+    background-size: 210px;
+  }
+
+  .coverChillhop:after{
+    content: 'chillhop';
+    position: absolute;
+    top: 36%;
+    left: 24%;
+    font-size: 30px;
+  }
+
+  .coverZen {
+    background-size: 240px;
+  }
+
+  .coverZen:after{
+    content: 'zen';
+    position: absolute;
+    top: 37%;
+    left: 28%;
+    font-size: 30px;
+  }
+
+  .coverClassic {
+      background-size: 210px;
+  }
+
+  .coverClassic:after{
+    content: 'classic';
+    position: absolute;
+    top: 37%;
+    left: 25%;
+    font-size: 30px;
+  }
+
+  .coverNature {
+      background-size: 210px;
+  }
+
+  .coverNature:after{
+    content: 'nature';
+    position: absolute;
+    top: 37%;
+    left: 26%;
+    font-size: 30px;
+  }
 
 }
 
@@ -632,15 +765,35 @@ and (min-width : 1224px) {
 and (max-width : 990px)
 and (min-width : 490px) {
 
-.flavorContainer {
-    height: 160px;
-    width: 300px;
-    margin-bottom: 20px;
-}
+  .flavorContainer {
+      height: 160px;
+      width: 300px;
+      margin-bottom: 20px;
+  }
 
-.timer {
-  margin-bottom: 40px;
-}
+  .timer {
+    margin-bottom: 40px;
+  }
+
+  .coverChillhop:after{
+    content: 'chillhop';
+    margin-left: 107px;
+  }
+
+  .coverZen:after{
+    content: 'zen';
+    margin-left: 133px;
+  }
+
+  .coverClassic:after{
+    content: 'classic';
+    margin-left: 111px;
+  }
+
+  .coverNature:after{
+    content: 'nature';
+    margin-left: 111px;
+  }
 
 }
 
