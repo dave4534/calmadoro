@@ -267,6 +267,82 @@ color: white;
   transform: translateY(-5px);
 }
 
+.frontFlavor {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: transform .85s ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    /*background: url(images/chillhopIcon.svg) no-repeat white ;*/
+    /*background-size: 90px;
+    background-position: 49% 35%;*/
+}
+
+.frontFlavor:after{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: .08em;
+    margin-top: 22px;
+    line-height: 254px;
+    margin-left: 43px;
+}
+
+.coverChillhop {
+    background: url(images/chillhopIcon.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverChillhop:after{
+    content: 'chillhop';
+}
+
+.coverZen {
+    background: url(images/zen.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverZen:after{
+  content: 'zen';
+  margin-left: 62px;
+}
+
+.coverClassic {
+    background: url(images/classical.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverClassic:after{
+  content: 'classic';
+}
+
+.coverNature {
+    background: url(images/nature.svg) no-repeat white ;
+    background-size: 90px;
+    background-position: 49% 35%;
+}
+
+.coverNature:after{
+  content: 'nature';
+  margin-left: 48px;
+}
+
+.effect {
+  transition: transform .85s ease-out;
+  transform: translateY(-160px);
+}
+
+
 
 
 /*media queries*/
