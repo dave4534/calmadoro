@@ -279,9 +279,6 @@ color: white;
     left: 0px;
     border-radius: 5px;
     cursor: pointer;
-    /*background: url(images/chillhopIcon.svg) no-repeat white ;*/
-    /*background-size: 90px;
-    background-position: 49% 35%;*/
 }
 
 .frontFlavor:after{
@@ -313,7 +310,7 @@ color: white;
 
 .coverZen:after{
   content: 'zen';
-  margin-left: 62px;
+  margin-left: 63px;
 }
 
 .coverClassic {
@@ -324,6 +321,7 @@ color: white;
 
 .coverClassic:after{
   content: 'classic';
+  margin-left: 46px;
 }
 
 .coverNature {
@@ -334,40 +332,12 @@ color: white;
 
 .coverNature:after{
   content: 'nature';
-  margin-left: 48px;
+  margin-left: 47px;
 }
 
 .effect {
   transition: transform .85s ease-out;
   transform: translateY(-160px);
-}
-
-
-
-
-/*media queries*/
-@media (max-width: 700px) {
-  .button {
-    width: 20%;
-    font-size: 1em;
-  }
-/*  .modebtn {
-    width: 17%;
-    font-size: .9em;
-  }*/
-  .timer {
-    font-size: 6em;
-    margin-bottom: 10px;
-  }
-  .logo {
-    width: 250px;
-  }
-  .playerHeader {
-    font-size: 1.2em;
-  }
-  .music-source-button {
-    width: 22%;
-  }
 }
 
 .suggestions {
@@ -442,16 +412,21 @@ color: white;
 }
 
 .flavorContainer {
-  height: 160px;
-  width: 160px;
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 0 1.3rem rgba(0,0,0,0.25);
-  overflow: hidden;
-  position: relative;
-  border-radius: 5px;
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 0.7rem rgba(0,0,0,0.25);
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
 }
 
+span.glyphicon.glyphicon-remove {
+    color: grey;
+   float: right;
+    cursor: pointer;
+}
 .front {
   background-color: white;
   height: 100%;
@@ -580,6 +555,31 @@ iframe {
 
 /*Media Queries Begin Here*/
 
+/*media queries*/
+
+@media (max-width: 700px) {
+  .button {
+    width: 20%;
+    font-size: 1em;
+  }
+/*  .modebtn {
+    width: 17%;
+    font-size: .9em;
+  }*/
+  .timer {
+    font-size: 6em;
+    margin-bottom: 10px;
+  }
+  .logo {
+    width: 250px;
+  }
+  .playerHeader {
+    font-size: 1.2em;
+  }
+  .music-source-button {
+    width: 22%;
+  }
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
@@ -652,12 +652,70 @@ and (max-device-width : 480px) {
     transform: translateY(-331px);
   }
 
+/*This might cause problems*/
   .flavorContainer:focus .front {
     transform: translateY(-331px);
   }
 
   .suggested-time {
       margin: -20px 0 30px 0;
+  }
+
+  .effect {
+    transition: transform .85s ease-out;
+    transform: translateY(-344px);
+  }
+
+  span.glyphicon.glyphicon-remove {
+    font-size: 25px;
+  }
+
+  .coverChillhop {
+    background-size: 210px;
+  }
+
+  .coverChillhop:after{
+    content: 'chillhop';
+    position: absolute;
+    top: 36%;
+    left: 24%;
+    font-size: 30px;
+  }
+
+  .coverZen {
+    background-size: 240px;
+  }
+
+  .coverZen:after{
+    content: 'zen';
+    position: absolute;
+    top: 37%;
+    left: 28%;
+    font-size: 30px;
+  }
+
+  .coverClassic {
+      background-size: 210px;
+  }
+
+  .coverClassic:after{
+    content: 'classic';
+    position: absolute;
+    top: 37%;
+    left: 25%;
+    font-size: 30px;
+  }
+
+  .coverNature {
+      background-size: 210px;
+  }
+
+  .coverNature:after{
+    content: 'nature';
+    position: absolute;
+    top: 37%;
+    left: 26%;
+    font-size: 30px;
   }
 
 }
@@ -716,6 +774,26 @@ and (min-width : 490px) {
 
   .timer {
     margin-bottom: 40px;
+  }
+
+  .coverChillhop:after{
+    content: 'chillhop';
+    margin-left: 107px;
+  }
+
+  .coverZen:after{
+    content: 'zen';
+    margin-left: 133px;
+  }
+
+  .coverClassic:after{
+    content: 'classic';
+    margin-left: 111px;
+  }
+
+  .coverNature:after{
+    content: 'nature';
+    margin-left: 111px;
   }
 
 }
