@@ -25,6 +25,7 @@ app.controller('TimeCtrl', ['$scope', '$timeout', function($scope, $timeout){
   $scope.setTimeTo = function (setSeconds) {
 
     if (setSeconds) {
+      $scope.customMin = false;
       if ($scope.mode === 'Work') {
         $scope.workCustom = setSeconds;
         // setSeconds.$setPristine();  <---- WHATS THIS???
@@ -67,7 +68,6 @@ app.controller('TimeCtrl', ['$scope', '$timeout', function($scope, $timeout){
 
 
   $scope.counterSec = getUItime(seconds);
-
 
   $scope.startStop = function() {
     isTimerRunning = !isTimerRunning;
