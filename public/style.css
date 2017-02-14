@@ -302,6 +302,12 @@ color: white;
     content: 'chillhop';
 }
 
+.coverChillhop:hover{
+    box-shadow: 1px 1px #797D7F, 2px 2px #797D7F, 3px 3px #797D7F;
+    -webkit-transform: translateX(-3px);
+    transform: translateY(-3px);
+}
+
 .coverZen {
     background: url(images/zen.svg) no-repeat white ;
     background-size: 90px;
@@ -311,6 +317,16 @@ color: white;
 .coverZen:after{
   content: 'zen';
   margin-left: 63px;
+}
+
+.coverZen:hover{
+  box-shadow: 1px 1px #797D7F, 2px 2px #797D7F, 3px 3px #797D7F;
+  -webkit-transform: translateX(-3px);
+  transform: translateY(-3px);
+}
+
+.coverZen:focus{
+  box-shadow: 0 5px 15px #5D6D7E;
 }
 
 .coverClassic {
@@ -324,6 +340,12 @@ color: white;
   margin-left: 46px;
 }
 
+.coverClassic:hover{
+  box-shadow: 1px 1px #797D7F, 2px 2px #797D7F, 3px 3px #797D7F;
+  -webkit-transform: translateX(-3px);
+  transform: translateY(-3px);
+}
+
 .coverNature {
     background: url(images/nature.svg) no-repeat white ;
     background-size: 90px;
@@ -333,6 +355,12 @@ color: white;
 .coverNature:after{
   content: 'nature';
   margin-left: 47px;
+}
+
+.coverNature:hover{
+  box-shadow: 1px 1px #797D7F, 2px 2px #797D7F, 3px 3px #797D7F;
+  -webkit-transform: translateX(-3px);
+  transform: translateY(-3px);
 }
 
 .effect {
@@ -356,7 +384,10 @@ color: white;
 }
 
 .suggestions:hover {
-  cursor: pointer;
+    cursor: pointer;
+    color: #566573;
+    box-shadow: 0 5px 15px #5D6D7E;
+    opacity: .6;
 }
 
 .suggested-time {
@@ -420,6 +451,10 @@ color: white;
     overflow: hidden;
     position: relative;
     border-radius: 5px;
+}
+
+.flavorContainer:focus {
+   box-shadow: 0 5px 15px #5D6D7E;
 }
 
 span.glyphicon.glyphicon-remove {
@@ -556,6 +591,12 @@ iframe {
 /*Media Queries Begin Here*/
 
 /*media queries*/
+
+/*@media (max-width: 992px) {
+  .bgImage {
+    min-height: 1470px;
+  }
+}*/
 
 @media (max-width: 700px) {
   .button {
