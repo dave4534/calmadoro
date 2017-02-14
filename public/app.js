@@ -12,16 +12,6 @@ $stateProvider
   url: '/about',
   templateUrl: './Templates/about.html'
   });
-  // .state('home.spotify', {
-  // url: '/spotify',
-  // controller: 'TimeCtrl',
-  // templateUrl:'./Templates/spotify.html'
-  // })
-  // .state('home.youtube', {
-  // url: '/youtube',
-  // controller: 'TimeCtrl',
-  // templateUrl:'./Templates/youtube.html'
-  // });
 
   $urlRouterProvider.otherwise('/home');
 
