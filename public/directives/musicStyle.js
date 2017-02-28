@@ -19,7 +19,7 @@ app.directive('musicStyle', ['$sce', function($sce) {
 			  //invoke function to get the selected music url
 			$scope.getUrl = function(boxName){
 
-			    console.log(boxName, 'selectedMusic =',$scope.selectedMusic, 'resultUrl=', boxName === $scope.selectedMusic ? $scope.url : '');
+			    // console.log(boxName, 'selectedMusic =',$scope.selectedMusic, 'resultUrl=', boxName === $scope.selectedMusic ? $scope.url : '');
 
 			    return boxName === $scope.selectedMusic ? $scope.url : ' ';
 			};
